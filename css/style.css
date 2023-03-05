@@ -131,10 +131,10 @@ elemento*/
 
 /* Selectores hermanos */
 .hermanos_general~li{
-    background-color: aquamarine;
+    background-color: #3a1233;
 }
 .hermano_adyacente+li{
-    background-color: aquamarine;
+    background-color: #3a1233;
 }
 
 .list_index{
@@ -218,7 +218,9 @@ elemento*/
     font-size: 20px;
 }
 #indice:target{
-    background-color: greenyellow;
+    background-color: #ffffff21;
+    border-radius: 15px;
+    padding-left: 10px;
 }
 /* Pseudoclases por posición y tipo */
 /* posición: */
@@ -239,7 +241,7 @@ elemento*/
 }
 /* para un numero de lista par */
 .lista-pseudoclases li:nth-child(even){
-    background-color: yellow;
+    background-color: #1d415a;
 }
 /* Para un numero de lista impar */
 .lista-pseudoclases li:nth-child(odd){
@@ -279,7 +281,7 @@ diferenciarlos de los Pseudoclases*/
     font-size: 30px;
 }
 .p-pseudoelemento::first-line{
-    color: #2d0097;
+    color: #ff79fa;
 }
 .p-pseudoelemento::selection{
     color: #a50073;
@@ -306,7 +308,7 @@ diferenciarlos de los Pseudoclases*/
 /* Ejemplo de Algoritmos css */
 /* Especificidad*/
 blockquote.cita-marco{
-    background-color: #FFC18E !important;
+    background-color: #121036 !important;
 }
 blockquote#cita-marco.cita-marco{
     background-color: #72c06b;
@@ -323,13 +325,13 @@ blockquote.cita-marco{
 
 /* Ejemplo de herencia */
 .cita-seneca{
-    background-color: cyan;
+    background-color: #131e36;
     font-size: 25px;
     border-style: dotted;
-    border-color: red;
+    border-color: lime;
 }
 .cita-seneca cite{
-    background-color: chartreuse;
+    background-color: #392d7c;
     font-size: initial;
     border-style: inherit;
     border-color: inherit;
