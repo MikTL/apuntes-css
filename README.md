@@ -9,10 +9,8 @@ Para entender los apuntes en la mayoria de los casos es necesario inspeccionar l
 Para dar un estilo agradable inicial a los apuntes usé [water CSS](https://watercss.kognise.dev/) que es una coleccion desplegable de estilos CSS, es la que pone el fondo de la pagina, el estilo del scroll, estilos a botones, tablas, listas, etc. La instalación es muy simple y lo encuentra en su pagina.
 
 
-
-
-
 ### Documentacion para css: 
 Para ver las pseudoclasses: https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes.
+
 Para ver los pseudoelementos: https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
 
