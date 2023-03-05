@@ -1,0 +1,50 @@
+:root{
+    --text-color: #5C3D2E;
+    --bgc-default: lightpink;
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*::before{
+    box-sizing: inherit;
+}
+.custom-props-1{
+    --primary-color: greenyellow;
+    --font-size: 25px;
+    background-color: var(--primary-color);
+}
+.custom-props-3{
+    color: var(--text-color);
+}
+.ch-10{
+    --padding-size: 2ch;
+    --num-ch:10ch;
+    background-color: var(--bgc-default);
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc((var(--padding-size) * 2) + var(--num-ch));
+} 
+  /*Min y Max */
+.min-max{
+    background-color:var(--bgc-default);
+    width: min(250px, 20vw);
+    height: max(150px, 25vh);
+}
+/* clamp */
+h1{
+    font-size: clamp(2rem, 1rem + 3vw, 3rem); 
+}
+/* volver*/
+.volver{
+    border: medium double green;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1px;
+    border-radius: 5px;
+    color: black;
+    background-color: antiquewhite;
+    position: absolute  ;
+    top: 70%;
+    left: 75%;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos practicos con flexBox</title>
+    <style>
+        *,
+        *::after,
+        *::before{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        header ul{
+            list-style-type: none;
+            
+        }
+        li{
+            margin: 0 0.5rem;
+        }
+        main{
+            flex-grow: 1;
+        }
+        .titulares{
+            padding: 1rem;
+            background-color: #222;
+            color: #eee;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        .hero-image{
+            background-image: url("https://placeimg.com/1280/720/any");
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            color: #FFF;
+        }
+        .hero-image div{
+            min-height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .75);
+        }
+        .hero-image h1{
+            font-size: 5vw;
+        }
+        .flex-responsive{
+            display: flex;
+            flex-flow: row wrap;
+            margin-bottom: 1px;
+        }
+        .flex-responsive-item{
+            border: thin solid rgb(38, 38, 100);
+            border-left: none;
+            border-bottom: none;
+            text-align: center;
+            flex: 1 1 200px;
+        }
+
+        @media screen and (min-width:1024px) {
+            .header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .menu ul{
+                display: flex;
+            }
+            /* Orden  */
+            .flex-container{
+                display: flex;
+                align-items: center;
+            }
+            .flex-item{
+                flex: 0 0 50%;
+            }
+            .flex-order-1{
+                order: 1;
+                /* tambien es posible hacer esto con flex-direction: row-reverse, pero aplicandolo al contenedor padre */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="titulares header">
+        <div class="logo">logo</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">sección 1</a></li>
+                <li><a href="#">sección 2</a></li>
+                <li><a href="#">sección 3</a></li>
+                <li><a href="#">sección 4</a></li>
+                <li><a href="#">sección 5</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <h2>Contenido Main</h2>
+        <article class="hero-image">
+            <div>
+                <h1>Flexbox is fucking COOL</h1>
+            </div>
+        </article>
+        <section class="flex-container">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facere eos ea ipsa natus, praesentium nihil voluptatem aliquam sint laboriosam obcaecati quos perferendis ab illo amet dolorem placeat doloribus pariatur
+                </p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placeimg.com/400/400/arch" alt="algo">
+            </article>
+        </section>
+        <section class="flex-container">
+            <article class="flex-item flex-order-1">
+                <h2>Titulo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facere eos ea ipsa natus, praesentium nihil voluptatem aliquam sint laboriosam obcaecati quos perferendis ab illo amet dolorem placeat doloribus pariatur
+                </p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placeimg.com/400/400/nature" alt="algo">
+            </article>
+        </section>
+        <h2>Responsive sin media queris con flexbox</h2>
+        <section class="flex-responsive">
+            <article class="flex-responsive-item">Elemento 1</article>
+            <article class="flex-responsive-item">Elemento 2</article>
+            <article class="flex-responsive-item">Elemento 3</article>
+            <article class="flex-responsive-item">Elemento 4</article>
+            <article class="flex-responsive-item">Elemento 5</article>
+            <article class="flex-responsive-item">Elemento 6</article>
+            <article class="flex-responsive-item">Elemento 7</article>
+            <article class="flex-responsive-item">Elemento 8</article>
+            <article class="flex-responsive-item">Elemento 9</article>
+            <article class="flex-responsive-item">Elemento 10</article>
+            <article class="flex-responsive-item">Elemento 11</article>
+            <article class="flex-responsive-item">Elemento 12</article>
+            <article class="flex-responsive-item">Elemento 13</article>
+            <article class="flex-responsive-item">Elemento 14</article>
+            <article class="flex-responsive-item">Elemento 15</article>
+            <article class="flex-responsive-item">Elemento 16</article>
+            <article class="flex-responsive-item">Elemento 17</article>
+            <article class="flex-responsive-item">Elemento 18</article>
+            <article class="flex-responsive-item">Elemento 19</article>
+        </section>
+    </main>
+    <footer class="titulares">
+        <h2>Contenido Footer</h2>
+    </footer>
+</body>
+</html>

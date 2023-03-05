@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/motion.css">
+    <title>Movimento en CSS</title>
+</head>
+<body>
+    <h1>Movimiento en CSS</h1>
+    <hr>
+    <section class="transition">
+        <h2>Transiciones</h2> 
+            <div class="box"></div>
+            <article class="card">
+                <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+            </article>
+    </section>
+    <hr>
+    <section class="transforms">
+        <h2>Transformaciones</h2><hr>
+        <h3>Transformaciones en 2D</h3>
+        <div class="dis-flex">
+            <div>
+                <h4>Translate (x y)</h4>
+                <article class="card transform-2d-translate">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Scale(x y)</h4>
+                <article class="card transform-2d-scale">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Rotate(x y z)</h4>
+                <article class="card transform-2d-rotate">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Skew(x y)</h4>
+                <article class="card transform-2d-skew">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Matrix <small>(scaleX, skewY, skewX, scaleY, translateX, translateY)</small></h4>
+                <article class="card transform-2d-matrix">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Multiple</h4>
+                <article class="card transform-2d-multiple">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            
+        </div>
+        <h3>Transformaciones en 3D</h3>
+        <div class="dis-flex">
+            <div>
+                <h4>Translate(z)</h4>
+                <article class="card perspective transform-3d-translate">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+                <p>No confundir con scale. Scale, cambia el tamaño, en cambio translateZ acerca o aleja</p>
+            </div>
+            <div>
+                <h4>Scale(z)</h4>
+                <article class="card perspective transform-3d-scale">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+                <p>Aqui no se aprecia el scaleZ porque nuesto elemento no tiene un volumen, para entender scaleZ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d" target="_blank">click aquí</a> </p>
+            </div>
+            <div>
+                <h4>Rotate(x y z)</h4>
+                <article class="card perspective transform-3d-rotate">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+                <p>Aqui no se aprecia el rotateZ porque nuesto elemento no tiene un volumen, para entenderlo <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d" target="_blank">click aquí</a> </p>
+            </div>
+            <div>
+                <h4>Matrix <small> (Recibe 16 valores)</small></h4>
+                <article class="card perspective transform-3d-matrix">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+                <p>Para entender matrix <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d" target="_blank">click aquí</a> </p>
+            </div>
+            <div>
+                <h4>Multiple</h4>
+                <article class="card perspective transform-3d-multiple">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            
+        </div>
+        <h3>Origen de transformación</h3>
+        <div class="dis-flex">
+            <div>
+                <h4>Centro <small>default</small></h4>
+                <article class="card hover-rotate transform-origin-center">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Esquina superior izquierda</h4>
+                <article class="card hover-rotate transform-origin-top-left">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>Esquina inferior derecha</h4>
+                <article class="card hover-rotate transform-origin-bottom-rigth">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+            <div>
+                <h4>un lugar random xd </h4>
+                <article class="card hover-rotate transform-origin-random">
+                    <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+                </article>
+            </div>
+        </div>
+        <h3>Flip-Cards</h3>
+        <article class="flip-card-1">
+            <div class="flip-face flip-front">
+                <img src="assets/gato_art.jpg" alt="Gato">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="assets/foto_perroo_surrealista.jpg" alt="perro_surrealista">
+            </div>
+        </article>
+        <article class="flip-card-2">
+            <div class="flip-face flip-front">
+                <img src="assets/gato_art.jpg" alt="Gato">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="assets/foto_perroo_surrealista.jpg" alt="perro_surrealista">
+            </div>
+        </article>
+        <p>
+            Para lograr esta animación, se puso dos div dentros de un contendor article, cada div tienen
+            una imagen, que sera una cara de las tarjetas. Al contenedor padre aparte de definir un tamaño, borde y centrarlo, se le tuvo que dar una posición relativa (para que funcione el posicionamiento absoluto que se le dio a las divs que contienen la imagen) ademas se le tiene que dar perspectiva y aplicar la propiedad <code>transform-style: preserve-3d;</code> tambien se le aplica la propiedad de transicion para la propiedad transform, eso seria todo respecto al contendor article. Ahora a los divs y a la imagen que esta dentro de ellas, se les da el ancho y alto que tiene el contendor arcticle, tambien debemos darle un posicionamiento abosoluto a las divs y aplicar la propiedad <code>backface-visibility: hidden;</code>. Asignamos una rotacion de 0 grados en Y al div que contiene la imagen que ira al frente, y la div que tiene la imagen que ira detras se le da una rotacion en Y de 180 grados. Por ultimo aplicamos la transicion de rotacion en el estado hover del contenedor principal.
+        </p>
+
+    </section>
+    <hr>
+    <section class="animations ">
+        <h2>Animaciones</h2>
+        <article class="card my-animation">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="perro_surrealista">
+        </article>
+        <article class="card my-animation-2">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="perro_surrealista">
+        </article>
+        <article class="card animation-multiple">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="perro_surrealista">
+        </article>
+    </section>
+    <section class="motion-examples">
+        <h2>Ejemplos de efectos de movimiento en CSS</h2>
+        <h3>FadeIn/FadeOut</h3>
+        <div class="fade-in">🎇</div>
+        <div class="fade-out">🎆</div>
+        <h3>Sacudida</h3>
+        <div class="shake">☎</div>
+        <h3>Pulsaciones</h3>
+        <div class="pulse">🧡</div>
+        <h3>Dibujando y Animando en CSS</h3>
+        <h4>Corazón</h4>
+        <div class="heart"></div>
+        <div class="heart-black"></div>
+        <h4>Spinner/Loader</h4>
+        <div class="spinner"></div>
+        <h4>Botones Animados</h4>
+        <button class="btn anim-bottom to-left">Animación Izquierda</button>
+        <button class="btn anim-bottom to-center">Animación Centro</button>
+        <button class="btn anim-bottom to-right">Animación Derecha</button>
+        <button class="btn anim-bg-gradient">Fondo con Gradiente</button>
+        <br><br>
+        <h3>Menu de pestañas (Tabs)</h3>
+        <nav class="tabs-menu">
+            <input type="radio" name="tabs" id="tab-1">
+            <label for="tab-1">sección 1</label>
+            <input type="radio" name="tabs" id="tab-2">
+            <label for="tab-2">sección 2</label>
+            <input type="radio" name="tabs" id="tab-3">
+            <label for="tab-3">sección 3</label>
+            <input type="radio" name="tabs" id="tab-4">
+            <label for="tab-4">sección 4</label>
+            <div class="tab-bg-hover"></div>
+        </nav>
+        <h3>Menu off Canvas</h3>
+        <input type="checkbox" class="off-canvas-btn">
+        <label class="off-canvas-burger"></label>
+        <nav class="off-canvas-menu">
+            <div class="off-canvas-menu-container">
+                <a href="#" class="off-canvas-link">Sección 1</a>
+                <a href="#" class="off-canvas-link">Sección 2</a>
+                <a href="#" class="off-canvas-link">Sección 3</a>
+                <a href="#" class="off-canvas-link">Sección 4</a>
+                <a href="#" class="off-canvas-link">Sección 5</a>
+            </div>
+        </nav>
+        <h3>Ventana Modal</h3>
+        
+        <a href="#modal-1">Abrir Modal</a>
+        <article id="modal-1" class="modal">
+            <div class="modal-container">
+                <a href="#cerrar" class="modal-close">X</a>
+                <h2>Esto es una ventana Modal</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim autem nemo, ipsum veritatis ab id sit tempore! Ipsum deserunt qui rem est tenetur non harum sed. Nemo, dignissimos ipsam?
+                </p>
+                <ul>
+                    <li><a href="">Enlace</a></li>
+                    <li><a href="">Enlace</a></li>
+                    <li><a href="">Enlace</a></li>
+                    <li><a href="">Enlace</a></li>
+                    <li><a href="">Enlace</a></li>
+                </ul>
+            </div>
+        </article>
+        <h3>Star Wars</h3>
+        <article class="star-wars">
+            <div class="starwars-container">
+                <h2>Episode III</h2>
+                <h3>REVENGE OF THE SITH</h3>
+                <p>
+                    War! The Republic is crumbling
+                    under attacks by the ruthless
+                    Sith Lord, Count Dooku.
+                    There are heroes on both sides.
+                    Evil is everywhere.
+                </p>
+                <p>
+                    In a stunning move, the
+                    fiendish droid leader, General
+                    Grievous, has swept into the
+                    Republic capital and kidnapped
+                    Chancellor Palpatine, leader of
+                    the Galactic Senate.
+                </p>
+                <p>
+                    As the Separatist Droid Army
+                    attempts to flee the besieged
+                    capital with their valuable
+                    hostage, two Jedi Knights lead a
+                    desperate mission to rescue the
+                    captive Chancellor....
+                </p>
+            </div>
+        </article>
+    </section>
+    <a href="index.html#indice" class="volver">VOLVER</a>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

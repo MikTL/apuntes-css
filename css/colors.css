@@ -1,0 +1,44 @@
+.color-by-name{
+    background-color: coral;
+    border: medium solid darkblue;
+    color: beige;
+}
+.color-hexadecimal{
+    background-color: #00000050; /*el 50 representa la opacidad */
+    border: thin solid #0f0;
+    color: #000;
+}
+.color-rgb{
+    background-color: rgba(0,0,0,0.3);/*rgba para agregar el canal alfa, para opacidad (0-1)*/
+    border: medium solid rgb(30, 57, 138);
+    color: rgb(51, 2, 33);
+
+}
+.color-hsl{
+    background-color: hsla(170,90% ,50%, 0.3);
+    border: thin solid hsl(0, 100%, 50%);
+    color: hsl(240, 100%, 30%);
+}
+/* transparente y currentColor */
+.transparent-current{
+    color: #006E7F;
+}
+.transparent{
+    width: 110px;
+    font-weight: bold;
+    background-color: #00000000;
+    border: thin solid black;
+}
+.current-color{
+    margin-top: 2px;
+    width: 110px;
+    border: medium solid currentColor;
+    background-color: #D9CB50;
+}
+/* Opacity */
+.opacity{
+    width: 150px;
+    background-color: #0f0;
+    border: medium solid darkblue;
+    opacity: 0.3;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/positions.css">
+    <title>Posicinamiento CSS</title>
+</head>
+<body>
+    <h1>Posicinamiento CSS</h1>
+    <section>
+
+        <p>El navegador coloca cada elemento teniendo en cuenta el orden en el que aparece en el 
+            documento y su tipo de visualización dependiendo si un elemento es de línea o bloque 
+        </p>
+        <p>
+            Con FLOAT y POSITION podemos modificar este comportamiento.
+            <p><b>Elementos flotantes</b>
+                <ul>
+                    <li>float: Convierte un elemento en flotante desplazandolo hasta la zona mas izquiera o derecha
+                        de la posición original.</li>
+                    <li>clear: Limpia la flotación (left, right, both)</li>
+                </ul>
+            </p>
+            <p><b>Tipos de posicinamiento</b> 
+                <ul>
+                    <li>static(default)</li>
+                    <li>relative</li>
+                    <li>obsolute</li>
+                    <li>fixed</li>
+                    <li>sticky</li>
+                </ul>
+                <p>Para mover los elementos posicionados se activan las propiedades:</p>
+                <ul>
+                    <li>top (vertical-eje Y)</li>
+                    <li>bottom (vertical-eje Y)</li>
+                    <li>left (horizontal-eje X)</li>
+                    <li>right (horizontal-eje X)</li>
+                    <li>z-index (profundidad -eje Z)</li>
+                </ul>
+                <p>
+                    Las propiedades top y left van a tener preferencia por sobre bottom y right 
+                    respectivamente. <br>
+                    Estas 5 propiedades no funcionan con el valor estatic
+                </p>
+    
+            </p>
+        </p>
+    </section>
+    <div class="sticky-body">sticky en el body</div>
+    <a class="volver" href="index.html#indice"><b>VOLVER AL INDICE</b></a>
+    <section>
+        <h2>relative</h2>
+        <p>El elemento conserva sus dimensiones y posición original en el flujo del
+            documento. Si se mueve toma como referencia su posición original
+        </p>
+        <h2>absolute</h2>
+        <p>
+            El elemento pierde sus dimensiones y posición original en el flujo del documento.
+            Si se mueve puede tomar como referencia 2 elementos:
+            <ol>
+                <li>El primer ancestro con posicionamiento relativo</li>
+                <li>Si no encuentra un ancestro relativo, se mueve respecto al documento HTML</li>
+            </ol>
+        </p>
+        <p>fixed</p>
+        <p>El elemento pierde sus dimensiones y posición original en el flujo del documento. Si se
+            mueve toma como referencia el documento html y queda fijo en esa posición, si se hace scroll 
+            el elemento no se moverá.
+        </p>
+        <p>sticky</p>
+        <p>
+            Para poder enterderlo se podría decir que es la combinación de posicionamiento relative y fixed, 
+            ya que las propiedades <i>top, left, rigth y bottom</i> no mueven el elemento si no que establece 
+            un punto de referencia y mientras no llegue  a ese valor  el elemento se comporta como un relative
+            y cuando llega se convierte en fixed. Para que este comportamiento funcione el elemento sticky debe ser 
+            hijo directo del body o su elemento contenedor debe de tener las dimensiones establecidas y solo
+            será sticky dentro del contenedor padre.
+        </p>
+        <p>z-index</p>
+        <p>Esta propiedad nos sirve para dar orden a la superposición de elementos, es decir si dos elementos estan uno 
+            encima del otro, con la propiedad z-index podemos decidiar que elemento queremos que vaya delante de otro. esto 
+            es posible porque el z-index recibe como valor un numero y dependiendo de si el numero es mas grande o mayor que 
+            el resto, este elemento se pondrá primero. (recomendable usar estos numeros de 10 en 10 o si es un proyecto grande
+            de 100 en 100 para que cuando aparezcan elementos que quisieras poner entre un rango lo puedas hacer normal)
+        </p>
+        <h3>Ejemplos</h3>
+        <div class="posicionamiento">
+            <div class="relative">RELATIVO</div>
+            <div class="absolute">ABSOLUTO</div>
+            <div class="fixed">FIXED</div>
+            <div class="sticky">STICKY contenedor</div>
+            <p class="z-index z-index1">Z-index1</p>
+            <p class="z-index z-index2">Z-index2</p>
+            <p class="z-index z-index3">Z-index3</p>
+        </div>
+    </section>
+    <br><br><br><br><br>
+    
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/box-model.css">
+    <title>Modelo de caja</title>
+</head>
+<body>
+    <article>
+        <h1>Modelo de caja en CSS</h1>
+    <p>Es la forma en que CSS ve a los elementos HTML, los ve como cajas con las siguientes
+        propiedades:
+        <ol>
+            <li>Contenido (content): generalmente es texto</li>
+            <li>Borde (border)</li>
+            <li>Relleno (padding): distancia interna entre el borde y contenido</li>
+            <li>Margen (magin): distancia externa entre el borde y el body entre otros elementos. </li>
+        </ol>
+        cada elemento tiene 4 lados y podemos manipular todos los lados individualmente, estos son:
+        <ol>
+            <li>Arriba (top)</li>
+            <li>Abajo (buttom)</li>
+            <li>Derecha (rigth)</li>
+            <li>Izquierda (left)</li>
+        </ol>
+    </p>
+    <p>Por defecto las etiquetas div tienen las propiedades de borde, rellenoy  margen en valor cero. Entonces vamos a 
+        modificar eso en los siguientes dos parrafos lorem.
+    </p>
+    <div class="caja-uno">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam ab odit suscipit,
+        ex, obcaecati ipsa, adipisci nostrum quam ratione excepturi eos? Consequuntur, exercitationem.
+        Quibusdam omnis ipsam natus tempora vero.
+    </div>
+    <div class="caja-dos">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam ab odit suscipit,
+        ex, obcaecati ipsa, adipisci nostrum quam ratione excepturi eos? Consequuntur, exercitationem.
+        Quibusdam omnis ipsam natus tempora vero.
+    </div>
+    <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <hr>
+    <article id="cajas-linea-bloque"> 
+        <h2>Cajas de linea y cajas de bloque</h2>
+        <strong style="background-color: #F37878;">Línea</strong>
+        <ul>
+            <li>Ocupan solo el espacio necesario para mostrar su contenido</li>
+            <li>No tienen dimensiones modificables (alto y ancho)</li>
+            <li>Permiten otros elementos a su lado</li>
+            <li>Padding y Margin solo empujan a elementos en horizontal, NUNCA VERTICAL</li>
+        </ul>
+        <h4 style="background-color: #9EB23B ;">Bloque</h4>
+        <ul>
+            <li>Ocupan todo el ancho disponible, generando asi un salto de línea</li>
+            <li>Tienen dimensiones modificables</li>
+            <li>No permiten otros elementos al lado (Aunque se les asigne un ancho o se les sube el margin)</li>
+        </ul>
+    </article>
+    <br>
+    <article>
+        <h2>Propiedad display</h2>
+        <p>La propiedad display nos permite establecer un comportamiento de visualización del elemento, este puede 
+            ser ocultar un elemento(none), cambiar a un elemento de bloque a uno de linea (inline) y viceversa(block),
+            hacer que un elemento ya sea de linea o bloque; puedan compartir propiedades (inline-block) como por ejemplo 
+            ponerle un margin y padding arriba y abajo a los elementos de tipo linea. La manera de usarlo es:
+            <pre>
+                <code>
+        .detalles{
+            display: inline-block;
+        }
+                </code>
+            </pre>
+        </p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <hr>
+    <article>
+        <h2>Propiedad Visibility</h2>
+        <p>
+            Se usa para ocultar elementos pero consevando el espacio que ocupan, a diferencia 
+            del <i>display: none;</i> que nos oculta el elemento haciéndolo como si no existiera,
+            la forma de usarlo es:
+            <pre>
+                <code>
+        .detalles{
+            Visibility: hidden;
+        }
+                </code>
+            </pre>
+        </p>
+        <p>Debajo hay un párrafo lorem</p>
+        <p class="p-visibility">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, tenetur.
+            Vitae ab sunt eum quasi neque amet officia ratione repellat alias! Consequatur, 
+            autem. Ad veniam quisquam error aut cumque harum.
+        </p>
+        <p>Arriba hay un párrafo lorem oculto con <i>visibility</i></p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <hr>
+    <article id="propiedad-overflow">
+        <h2>Propiedad Overflow</h2>
+        <p>
+            Esta propiedad define como se muestra el contenido desbordado, tanto en el eje 
+            horizontal como en el eje vertical. por defecto su valor es <i>visible</i> por lo tanto el contenido
+            desbordado aun es visible y puede se molesto al tapar a otros elementos debajo o de sus lados,
+            para ocultarlo se usa <i>hidden</i> con eso el contenido que esta fuera de las dimensiones 
+            establecidas se ocultan, entonces para poder acceder a dicho contenido se agrega el valor 
+            <i>scroll</i>, esto nos agregara una barra de desplazamiento vertical. Tambien podemos darle
+            un valor <i>auto</i>, con esto el navegador decide si es necesario mostrar una barra de 
+            desplazamiento o no.ejemplo:
+        </p>
+        <p class="p-overflow">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus impedit ut pariatur 
+            odio architecto voluptates cupiditate beatae repellat laborum? Alias molestiae quis ad
+            dolorem eos at perspiciatis, reiciendis laboriosam repellat!
+        </p>
+        <p>Tambien es posible solo agregar una barra de desplazamiento en vertical u horizontal</p>
+        <p class="p-overflow-horizontal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iste et quod.
+        </p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <hr>
+    <article id="tamanio-caja">
+        <h2>Tamaño de caja</h2>
+        <p>
+            El tamaño de caja inicialmente es el tamañano que el <i>content</i>, asi que si nosotros 
+            establecemos un tamaño para nuestro elemento, este será el tamaño que tomará <i>content</i> pero
+            si le agregamos padding y bordes al elemento, crecerá el tamaño total de la caja, dejando al 
+            <i>content</i> con el valor que establecimos. Esto podria causar inconvenientes a la hora de maquetar
+            nuestra web. Asi que para evitar eso, podemos modificar para que la caja se ajuste automáticamente 
+            al tamaño que nosotros queremos establecer, quiere decir que el valor de dimensiones que nosotros 
+            establezcamos no se aplicará solo al <i>content</i> si no la caja entera. Dejo tres ejemplos:
+        </p>
+        <div class="div-box-sizing">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptatibus veritatis ipsa 
+            iusto molestiae, debitis quod voluptas odit vel, blanditiis saepe consequatur quasi velit repellendus 
+            quaerat est at quis necessitatibus.
+        </div>
+        <div class="no-border">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptatibus veritatis ipsa 
+            iusto molestiae, debitis quod voluptas odit vel, blanditiis saepe consequatur quasi velit repellendus 
+            quaerat est at quis necessitatibus.
+        </div>
+        <div class="div-border-box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptatibus veritatis ipsa 
+            iusto molestiae, debitis quod voluptas odit vel, blanditiis saepe consequatur quasi velit repellendus 
+            quaerat est at quis necessitatibus.
+        </div>
+        <p>
+            Los 3 párrafos son etiquetas div y comparten el mismo valor en dimensiones y fondo, al primero y
+            al último se les agregó un borde y vaya, tienen diferente tamaño. Eso es porque al primero se le sumó 
+            los pixeles del borde y el ultimo se adaptó al tamaño establecido reduciendo el tamaño del <i>content</i>
+            para asi sumando el padding y el border tenga la medida establecida. Esto se logra gracias a la propiedad:
+            <i>box-sizing: border-box;</i> 
+        </p>
+        <p>
+            Ahora al momento de maquetar una página, colocar la propiedad a cada elemento o clase seria un poco tedioso,
+            entonces para aplicarlo de manera general a todo el documento HTML, podemos usar la técnica que nos lo 
+            propone Paul Irish:
+            <pre>
+                <code>
+    html {
+        box-sizing: border-box;
+        }
+        *, 
+        *:before,
+        *:after {
+        box-sizing: inherit;
+        }
+                </code>
+            </pre>
+            Esto podemos colocarlo en cualquier lugar (recomendable en las primeras lineas) de nuestra hoja de estilo ya que aplicará a todo elemento gracias a
+            los Pseudoelementos <i>:before</i> y <i>:after</i>
+        </p>
+
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <article>
+        <h2>Colapso de Margenes Verticales</h2>
+        <div class=div-general-colapso>
+            <div>Hola</div>
+            <div>Como </div>
+            <div>Estás</div>
+            <span>Span 1</span><span>Span 2</span><span>Span 3</span>
+        </div>
+        <p>
+            Los elementos anteriores son divs a las que se les dio un margin de 25px arriba y 25px abajo para cada uno,
+            entonces una suposición lógica seria que entre esos div habria una separación de 50px por la suma de los 25px
+            de margin de cada uno, pero no. Los margenes no se suman, por ello es recomendable solo usar margin-top o 
+            margin-bottom y no ambos. Tambien tenemos 3 etiquetas <i>span</i>, y a ellas se les dio un margin de 20px a la
+            derecha y 20px a la Izquierda y como podemos apreciarlo estos sí se suman. Entonces podemos decir que
+            <b>horizontalmente los margenes no colapsan como sucede de manera vertical</b>. 
+        </p>
+        
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <article>
+        <h2>Centrado de Cajas</h2>
+        <article class="sitio-web">
+            <header>
+                <h2>Logrando centrar una caja</h2>
+            </header>
+            <hr>
+            <main>
+                <h3>Contenido</h3>
+                <p>Para lograr el centrado de caja del elemento en el html 
+                    simplemente su usa la propiedad <i>margin-left: auto;</i>
+                    y <i>margin-right: auto;</i>
+                </p>
+
+            </main>
+            <hr>
+            <footer>
+                <p>Copyright © MikiTL 2022</p>
+            </footer>
+        </article>
+    </article>
+    <a class="subir" href="index.html#indice">⏫</a>
+</body>
+</html>

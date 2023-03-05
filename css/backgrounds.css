@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+  }
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: medium dashed red;
+    margin: 4px auto;
+    
+}
+.bg-color{
+    background-color: violet;
+}
+.image{
+    background-image: url("../assets/foto_perroo_surrealista.jpg");
+}
+.bg-size{
+    background-image: url("../assets/foto_perroo_surrealista.jpg");
+    background-size: 200px 0;
+    background-size: cover; 
+    background-size: contain;
+}
+.bg-repeat{
+    
+    background-image: url("../assets/foto_perroo_surrealista.jpg");
+    background-size: 100px 70px;
+    background-repeat: repeat-x;
+}
+.bg-position{
+    background-color: #66d3af98;
+    background-image: url("../assets/foto_perroo_surrealista.jpg");
+    background-size: 100px 70px;
+    background-repeat:no-repeat;
+    background-position: 10px 10px;
+    background-position: bottom center;
+}
+.bg-clip {
+    background-color: #66d3af98;
+    background-image: url("../assets/foto_perroo_surrealista.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding: 5px;
+    background-clip:content-box;
+}
+.bg-origin {
+    background-color: #66d3af98;
+    background-image: url("../assets/foto_perroo_surrealista.jpg");
+    background-size: 100px;
+    background-repeat:no-repeat;
+    background-origin: border-box;
+}
+.bg-atachment{
+    background-color: #66d3af98;
+    background-image: url("../assets/gato_art.jpg");
+    width: 960px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-multiple{
+    background-image:
+        url(../assets/favicon.png),
+        url(../assets/foto_perroo_surrealista.jpg);
+    width: 1000px;
+    height: 500px;
+    background-size: 110.5px,  cover;
+    background-repeat: repeat-x, no-repeat;
+}
+.bg-art{
+    width: 1000px;
+    height: 563px;
+    background:
+        url("../assets/arbol.png") bottom center ,
+        url("../assets/aves.png") bottom center no-repeat ,
+        url("../assets/cielo.png") top center fixed
+        ;
+}
+/* volver */
+.volver{
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    position: fixed;
+    top: 20vh;
+    left: 85vw;
+}   

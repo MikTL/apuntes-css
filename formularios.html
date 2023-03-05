@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Estilos a formularios</title>
+</head>
+<body>
+    <h1>Formulario de contacto</h1>
+    <form class="contact-form" action="https://formsubmit.co/maik-ft-tucto@hotmail.com" method="POST">
+        <input type="text" name="nombre" id="" placeholder="Escribe tu nombre" 
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo se aceptan letras y espacios" required> 
+        <input type="email" name="correo" placeholder="Escribe tu correo" required 
+        pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Formato de correo incorrecto">
+        <textarea name="comentarios" cols="30" rows="10" required placeholder="Escribe tu comentario"></textarea>
+        <input type="submit">
+    </form>
+    <a href="index.html#indice" class="volver">Volver</a>
+</body>
+</html>

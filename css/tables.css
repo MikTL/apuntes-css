@@ -1,0 +1,39 @@
+.tables{
+    display: flex;
+    
+}
+.tables table{
+    margin: 0 2rem;
+    font-size: 2rem;  
+}
+.table-one{
+    border-collapse: separate;
+    empty-cells: hide;
+}
+.table-two{
+    border-collapse: collapse;
+}
+.table-three{
+    border-collapse: collapse;
+}
+
+
+table,
+tr,
+th,
+td{
+    border: thin solid red;
+}
+/* Volver */
+.volver{
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    position: fixed;
+    top: 20vh;
+    left: 85vw;
+}

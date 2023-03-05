@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts-text.css">
+    <!-- para fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- Para iconos  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Iconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Estilos de fuentes y textos</title>
+</head>
+<body>
+    <h1>Estilos de fuentes y textos</h1>
+    <h2>Estilos de fuentes tipográficas</h2>
+    <ul>
+        <li>font-family (tipo de fuente)</li>
+        <li>font-size (tamaño de fuente)</li>
+        <li>font-weight (peso de la fuente)</li>
+        <li>font-style (inclinación de texto)</li>
+        <li>font-variant (convertir a mayusculas)</li>
+        <li>line-height (tamaño de interlineado)</li>
+        <li>font (shorthand <code>font: font-style font-variant font-weight font-size line-height font-family</code></li>
+    </ul>
+    <p class="font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptas facilis numquam sed doloremque veniam ducimus temporibus non ratione, quas quidem aspernatur at molestias nulla provident repellendus voluptatem, culpa aut!
+    </p>
+    <h2>Cargar fuentes externas</h2>
+    <h3>De manera local</h3>
+    <p>
+        Para cargar fuentes externas debemos tener la fuente en formato woff (Web Open Font Format ) o woof2 
+        en nuestra carpeta de assets y otro que tengas. Para poder usar la fuente tenemos que usar el @font-face:
+        <pre>
+            <code>
+    @font-face{
+        font-family: "Fontname";
+        src: url("ruta/archivo.woff") format("woff");
+        font-display: swap;
+    }
+            </code>
+        </pre>
+        Para usarlo solo usas el nombre que le diste como valor al font-family en el @font-face. Cuando el recurso de la fuente esta en un servidor entonces es conveniente usar la la propiedad: <code>font-display</code> que tiene como valores lo siguiente:
+        <ul>
+            <li>auto - Permite que el navegador utilice el método predeterminado que suele ser block.</li>
+            <li>block - Oculta brevemente hasta que la fuente se haya descargado por completo</li>
+            <li>swap - Indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente personalizada se haya descargado por completo</li>
+            <li>fallback - es una mezcla de auto y swap</li>
+            <li>optional - Ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicará la fuente personalizada</li>
+        </ul>
+    </p>
+    <p>Ejemplos:</p>
+    <p class="chalet">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque saepe magnam veritatis a sequi. Necessitatibus vel modi, consequatur distinctio aliquid voluptatibus. Dolorum distinctio nisi quo quasi enim reprehenderit tempore quae?
+    </p>
+    <p class="pecita">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat deserunt minus aliquid dicta illum laudantium dolore exercitationem delectus recusandae! Quos quia quidem voluptatem earum maxime officiis unde quasi vel neque.
+    </p>
+    <h3>De Google Fonts</h3>
+    <p>Para importar una fuente de google fonts, solo es necesaria encontrar la fuente de tu gusto, al seleccionarla 
+        saltará una sección al costado con la opcion de copiar la etiqueta <code>&lt;link&gt;</code> con los valores ya dentro, o tambien hay la opcion de importarlo en la hoja de estilos con <code>@import</code>. Es recomendable hacerlo con la etiqueta link, copiamos todo el contenido y pegamos en el head del documento. y para usarlo en css tambien esta el codigo en la página, debajo del codigo para html. 
+    </p>
+    <p>Ejemplo:</p>
+    <p class="roboto">
+        <b>Es importante siempre poner una fuente alternativa en el "font-family" al usar una fuente externa</b> 
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis officia maxime dolores ex iure facere dolor necessitatibus distinctio totam hic blanditiis sed quis ullam, facilis cumque impedit eius cum.
+    </p>
+    <h2>Mas propiedades para texto</h2>
+    <ul>
+        <li>text-align</li>
+        <li>text-decoration</li>
+        <li>text-ident</li>
+        <li>text-overflow (requiere propiedad overflow: hidden; y white-space: nowrap;)</li>
+        <li>text-transform (para covertir el texto en mayusculas y minusculas)</li>
+        <li>letter-spacing (para el espaciado de cada caracter)</li>
+        <li>white-space (define como se maneja el espacio en blanco del elemento)</li>
+        <li>word-break (Define como debe dividirse las palabras al llegar al final de una linea)</li>
+        <li>word-spacing (Para el espaciado de palabras)</li>
+        <li>writing-mode (horizontal, vertical)</li>
+    </ul>
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolor magni porro ipsam, incidunt magnam doloremque provident exercitationem dolores similique ut impedit explicabo non repellendus alias, in a odio est!
+    </p>
+    <p><b>Parráfo con la propiedad text-overflow</b></p>
+    <p class="text-overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptate vitae, tempore a numquam obcaecati ducimus nostrum molestiae voluptatum maiores iusto voluptas cupiditate porro, repellat enim veritatis quaerat suscipit possimus.
+    </p>
+    <p><b>Párrafo con white-space</b></p>
+    <p class="white-space">
+        primera linea     5 espacios despues
+        segunda linea      6 espacios despues
+    </p>
+    <p><b>Parrafo con word-spacing</b></p>
+    <p class="word-spacing">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellendus recusandae animi. Aut ex libero quia quos ea saepe vitae dolorem delectus cum illum, quas fuga repellat, voluptas aliquid? Ex!
+    </p>
+    <p><b>Párrafo con writing-mode</b></p>
+    <p class="writing-mode">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, iure! Ut officiis inventore tempore pariatur illum iusto laboriosam quia, itaque libero! Ut maxime blanditiis aperiam non quaerat enim inventore nemo.
+    </p>
+    <h2>Tipografias de íconos vectoriales</h2>
+    <h3>Material Icons</h3>
+    <p>Para implementar iconos de google, implementamos las opciones que nos dan ellas, en el ejemplos siguiente solo copié el &lt;link&gt; una vez, los iconos son generados por su nombre.</p>
+    <span class="material-symbols-outlined">
+        favorite
+    </span>
+    <span class="material-symbols-outlined">
+        delete
+    </span>
+    <h3>Iconos bootstrap</h3>
+    <p>Copiamos el CDN que nos lo propone en su pagina y los pegamos en el head del documento html, luego copiamos el atributo &lt;i&gt; del icono y ¡Listo!</p>
+    <i class="bi bi-apple"></i>
+    <i class="bi bi-bell-slash-fill"></i>
+    <i class="bi bi-youtube"></i>
+    <a  class="volver" href="index.html">Volver</a>
+</body>
+</html>

@@ -1,0 +1,84 @@
+.posicionamiento{
+    width: 500px;
+    height: 600px;
+    border: thin solid black;
+    position: relative;
+}
+.posicionamiento>div{
+    width: 150px;
+    height: 20px;
+    border: thin solid red;
+}
+.relative{
+    background-color: #a9c4f7;
+    position: relative;
+    left: 20px;
+    top: 5px;
+}
+.absolute{
+    background-color: #FFF9CA;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+.fixed{
+    background-color: #B7E5DD;
+    position: fixed;
+    top: 300px;
+    right: 10px;
+
+}
+.volver{
+    background-color: transparent;
+    border: thin solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 7px;
+    text-decoration: none;
+    width: 170px;
+    height: 25px;
+    position: fixed;
+    top: 325px;
+    right: 10px;
+}
+.sticky{
+    background-color: #E7FBBE;
+    position: sticky;
+    top: 80px;
+    left: 400px;
+}
+.sticky-body{
+    width: 150px;
+    height: 20px;
+    border: thin solid red;
+    background-color: chartreuse;
+    position: sticky;
+    top: 80px;
+    left: 550px;
+} 
+/* z-index */
+.z-index{
+    border: medium groove black;
+    width: 100px;
+    height: 100px;
+    
+    position: relative;
+    
+}
+.z-index1{
+    background-color: aqua;
+    left: 50px;
+    z-index: 3;
+}
+.z-index2{
+    background-color: gold;
+    bottom: 80px;
+    left: 30px;
+    z-index: 2;
+}
+.z-index3{
+    background-color: silver;
+    bottom: 160px;
+    left: 10px;
+    z-index: 1;
+}

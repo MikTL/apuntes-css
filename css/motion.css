@@ -1,0 +1,783 @@
+html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+.box{
+    border: medium solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    width: 150px;
+    height: 150px;
+}
+.card{
+    border: thick solid black;
+    width: 500px;
+    height: 300px;
+    margin: 0px auto;
+
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+
+}
+/* ¿Que propiedades, son animables? */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties */
+/* Transiciones */
+.transition .box{
+    background-color: #BFFFF0;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
+    transition: 
+        border-color 2s ease 0.5s,
+        background-color 2s ease 0.5s,
+        border-radius 2s ease 0.5s;
+    /* transition: all 2s ease 0.5s; */
+
+}
+
+.transition .box:hover{
+    background-color: #F0FFC2;
+    border-color: red;
+    border-radius: 20px;
+    /* border-style: dashed; */
+}
+
+/* Transiciones Multiples, en distintos tiempos */
+.transition .card{
+    transition: 
+        opacity 1s ease,
+        border-color 2s ease 0.3s,
+        filter 3s ease 2.3s,
+        box-shadow 3s steps(3);
+}
+.transition .card:hover{
+    opacity: 0.79;
+    border-color: #219F94;
+    filter: saturate(3);
+    box-shadow: 1rem 1rem 0.2rem;
+}
+.transition .card img{
+    transition:object-position 4s ease 2s;
+}
+.transition .card img:hover{
+    object-position: 100% 50%;
+}
+/* TRANSFORMACIONES */
+.dis-flex{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Transformaciones en 2D */
+.transform-2d-translate img{
+    transition: transform 0.8s ease-in ;
+}
+.transform-2d-translate img:hover{
+    transform: translate(50px, -80px);
+}
+
+.transform-2d-scale img{
+    transition: transform 2s ease-in ;
+}
+.transform-2d-scale img:hover{
+    transform: scaleX(1.2);
+    transform: scaleY(1.2);
+    transform: scale(1.2,1.2);
+    transform: scale(-1,-1);
+}
+
+.transform-2d-rotate img{
+    transition: transform 2s ease-in ;
+}
+.transform-2d-rotate img:hover{
+    transform: rotateX(85deg);
+    transform: rotateY(50deg);
+    transform: rotateZ(15deg);
+}
+
+.transform-2d-skew img{
+    transition: transform 2s ease-in ;
+}
+.transform-2d-skew img:hover{
+    transform: skewX(20deg);
+    transform: skewY(20deg);
+    transform: skew(20deg, 10deg);
+}
+
+.transform-2d-matrix img{
+    transition: transform 2s ease-in ;
+}
+.transform-2d-matrix img:hover{
+    transform: matrix(-1,0.2,0.2,0.5,0.5,0.5)
+}
+
+.transform-2d-multiple img{
+    transition: transform 2s ease-in ;
+}
+.transform-2d-multiple img:hover{
+    transform:
+        translate(25%, -25%)
+        rotateZ(15deg)
+        skew(20deg, 15deg);
+}
+/* Transformaciones en 3D (debemos activar la perspectiva del elemento o del contenedor) */
+.perspective{
+    perspective: 10rem;
+}
+.transform-3d-translate img{
+    transition: transform 2s ease-in-out;
+}
+.transform-3d-translate img:hover{
+    transform: translateZ(2rem);
+    transform: translateZ(-5rem);
+    transform: translate3d(20%, 20%, 1.5rem);
+}
+
+.transform-3d-scale img{
+    transition: transform 2s ease-in-out;
+}
+.transform-3d-scale img:hover{
+    transform: scale3d(1.2,1.2 ,2 );
+}
+
+.transform-3d-rotate img{
+    transition: transform 2s ease-in-out;
+}
+.transform-3d-rotate img:hover{
+    transform: rotateX(15deg);
+    transform: rotateY(15deg);
+    transform: rotate3d(1,1,1, -15deg );
+}
+
+.transform-3d-matrix img{
+    transition: transform 2s ease-in-out;
+}
+.transform-3d-matrix img:hover{
+    transform: matrix3d(0.5,0,-0.86,0,0.59,1.2,-1.03,0,0.8,0,0.5,0,25.98,0,15, 1);
+}
+
+.transform-3d-multiple img{
+    transition: transform 2s ease-in-out;
+}
+.transform-3d-multiple img:hover{
+    transform: rotate3d(1,1,1, -15deg) scale3d(1.2,1.2 ,2);
+}
+
+/* Origen de Movimiento */
+.hover-rotate img:hover{
+    transform: rotate(360deg);
+}
+.transform-origin-center img{
+    transition: transform 2s ease-in-out;
+    transform-origin: 50% 50% 0;
+}
+.transform-origin-top-left img{
+    transition: transform 2s ease-in-out;
+    transform-origin: 0 0 0;
+}
+.transform-origin-bottom-rigth img{
+    transition: transform 2s ease-in-out;
+    transform-origin: bottom right 0;
+}
+.transform-origin-random img{
+    transition: transform 2s ease-in-out;
+    transform-origin: 25% 50% 0;
+}
+/* FLIP CARDS */
+.flip-card-1,
+.flip-card-2{
+    border: thick solid rgb(109, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    width: 500px;
+    height: 350px;
+
+    position: relative;
+    cursor: pointer;
+    transition: transform 3s ease-in-out;
+    perspective: 10rem;
+    transform-style: preserve-3d;
+}
+.flip-card-2{
+    transform-origin: center right;
+}
+.flip-card-1 img,
+.flip-card-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center 50%;
+}
+.flip-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-front{
+    transform: rotateY(0deg);
+}
+.flip-back{
+    transform: rotateY(180deg);
+}
+.flip-card-1:hover{
+    transform: rotateY(180deg);
+}
+.flip-card-2:hover{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+/* ANIMACIONES */
+@keyframes myAwesomeAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(100%);
+    }
+    
+}
+.my-animation{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: myAwesomeAnimation;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(.16,.74,1,.4);
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation-direction: normal;
+    animation-direction: reverse;
+    animation-fill-mode: none;
+    /* forwards: al final de la animación, se queda con los estilos finales de la animación */
+    animation-fill-mode: forwards; 
+    /* backwards:Al inicio de la animación se queda con los estilos inicialos de la animación */
+    animation-fill-mode: backwards;
+    /* both: aplica al mismo tiempo forward y backwards */
+    animation-fill-mode: both;
+    animation-play-state: paused;
+    animation-play-state: running;
+    animation: myAwesomeAnimation 3s cubic-bezier(.35,.02,.7,.48) 500ms 7 alternate both running;
+
+}
+
+@keyframes myAwesomeAnimation-2{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+.my-animation-2{
+    animation-name: myAwesomeAnimation-2;
+    animation:myAwesomeAnimation-2 3s  linear 25ms  3 alternate-reverse both running;
+
+}
+@keyframes multipleAnimation1{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+
+} 
+@keyframes multipleAnimation2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(80%);
+    }
+
+} 
+.animation-multiple{
+     animation: multipleAnimation1 3s infinite, multipleAnimation2 4s infinite;
+}
+/* EJEMPLOS DE MOVIMIENTO */
+.motion-examples{
+    text-align: center;
+}
+/* FadeIn y FadeOut */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.fade-in{
+    font-size: 6vh;
+    animation: fadeIn 2s infinite linear 2s alternate both;
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fade-out{
+    font-size: 6vh;
+    animation: fadeOut 2s infinite linear 2s alternate both;
+}
+/* Sacudida */
+@keyframes shakeV {
+    10%,
+    90%{
+        transform: translate(-1px, 0);
+    }
+    20%,
+    80%{
+        transform: translate(-2px, 0);
+    }
+    30%,
+    50%,
+    70%{
+        transform: translate(-4px, 0);
+    }
+    40%,
+    60%{
+        transform: translate(4px, 0);
+    }
+}
+.shake{
+    font-size: 6vh;
+    display: inline-block;
+}
+.shake:hover{
+    animation: shakeV 1s cubic-bezier(.14,.62,.82,.39) both;
+    transform: translate(0, 0);
+}
+/* Pulsaciones */
+@keyframes pulse {
+    0%{
+        transform: scale(0.5, 0.5);
+    }
+    40%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(0.8, 0.8);
+    }
+    80%{
+        transform: scale(1.5, 1.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+    
+}
+.pulse{
+    font-size: 6vh;
+    animation: pulse 1s cubic-bezier(.14,.62,.82,.39) 7 both;
+}
+/* Dibujar un corazon con css */
+.heart-black{
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    animation:  pulse 1s cubic-bezier(.14,.62,.82,.39) 7 both;
+}
+.heart-black::after,
+.heart-black::before{
+    position: absolute;
+    content: "";
+    left: 5vw;
+    top:0;
+    width: 5vw;
+    height: 8vw;
+    background-color: black;
+    transform: rotate(-45deg);
+    border-radius: 5vw 5vw 0 0;
+    transform-origin: 0 100%;
+    
+    
+}
+.heart-black::after{
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    
+}
+.heart{
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    animation:  pulse 2s cubic-bezier(.14,.62,.82,.39) 7 both;
+}
+@keyframes heartColor {
+    10%{
+        background-color: #9e042d;
+    }
+    100%{
+        background-color: #FF1E00;
+
+    }
+}
+.heart::after,
+.heart::before{
+    position: absolute;
+    content: "";
+    left: 3.5vw;
+    top:1.5px;
+    width: 5vw;
+    height: 8vw;
+    background-color: red;
+    transform: rotate(45deg);
+    border-radius: 25px 25px 0 0;
+    animation: heartColor 2s infinite;
+    
+}
+.heart::after{
+    left: 1.3vw;
+    transform: rotate(-45deg);
+    
+}
+/* Spinner */
+@keyframes spinner {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+
+    }
+}
+.spinner{
+    /* background-color: aquamarine; */
+    width: 7vw;
+    height: 7vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: #00000521 solid thick;
+    border-left: #21E1E1 solid thick;
+    border-radius: 50%;
+    /* border-radius: ; */
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: spinner 2s cubic-bezier(.17,.67,.9,.42) infinite;
+}
+/* Botones Animados */
+.btn{
+    position: relative;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.2rem;
+    width: 15rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0.25rem 0.25rem .1rem rgba(0,0,0, 0.1) ;
+}
+.anim-bottom::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0.25rem;
+    background-color: red;
+    transition: width 0.5s ease, left 0.5s ease, right 0.5s ease ; 
+}
+.anim-bottom:hover::after{
+    width: 100%;
+}
+.to-left::after{
+    left: 0;
+}
+.to-right::after{
+    right: 0;
+}
+.to-center::after{
+    left: 50%;
+}
+.to-center:hover::after{
+    left: 0;
+}
+.anim-bg-gradient{
+    background-image: linear-gradient(to right, #40DFEF 15%, violet 25% 50%, orange 60% 80%, orangered 90% 100%);
+    background-size: 300% 100%;
+    transition: background-position 1.5s ease-in-out;
+}
+.anim-bg-gradient:hover{
+    background-position: 100% 0;
+}
+/* menu de Pestañas */
+.tabs-menu{
+    position: relative;
+    width: 70%;
+    height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabs-menu input[type="radio"]{
+    display: none;
+}
+.tabs-menu label{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: calc(100%/4 - .5rem);
+    cursor: pointer;
+}
+.tabs-menu label:hover{
+    color: white;
+}
+.tabs-menu input[type="radio"]:checked + label{
+    color: #fff;
+}
+.tab-bg-hover{
+    position: absolute;
+    width: calc(100%/4 - .5rem);
+    height: 2rem;
+    background-image: linear-gradient(90deg, #E64848, #C21010);
+    border-radius: 1.5rem;
+    transition: transform 300ms ease-in-out;
+}
+#tab-1:checked ~ .tab-bg-hover{
+    transform: translateX(0%);
+}
+#tab-2:checked ~ .tab-bg-hover{
+    transform: translateX(100%);
+}
+#tab-3:checked ~ .tab-bg-hover{
+    transform: translateX(200%);
+}
+#tab-4:checked ~ .tab-bg-hover{
+    transform: translateX(300%);
+}
+/* Boton Amburguesa */
+.off-canvas-btn{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+    border: thin solid black;
+}
+.off-canvas-burger{
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 3rem;
+    height: 0.6rem;
+    z-index: 998;
+    cursor: pointer;
+    background-color: red;
+    border-radius: .3rem;
+    transform: rotate(0deg) translateY(-1.2rem);
+    transition: background-color 500ms ease, transform 0.5s ease;
+    transform-origin: top left;
+}
+.off-canvas-burger::before,
+.off-canvas-burger::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height:0.6rem ;
+    background-color: red;
+    border-radius: .3rem;
+    transition: background-color 500ms ease, transform 0.5s ease;
+}
+.off-canvas-burger::before{
+    transform: rotate(0deg) translate(0,-0.9rem);
+}
+.off-canvas-burger::after{
+    transform: rotate(0deg) translate(0,0.3rem);
+}
+.off-canvas-btn:checked + .off-canvas-burger{
+    background-color: transparent;
+}
+.off-canvas-btn:checked + .off-canvas-burger::before{
+    transform: rotate(45deg);
+}
+.off-canvas-btn:checked + .off-canvas-burger::after{
+    transform: rotate(-45deg) translate(0.4rem, -0.39rem);
+}
+
+.off-canvas-menu{
+    position: fixed;
+    right: 16vw;
+    bottom: 1.1vh;
+    width: 242px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 997;
+    justify-content: center;
+    align-items: center;
+    transform: translate(57vw,57vh);
+    transition: transform 0.8s ease;
+
+}
+.off-canvas-btn:checked ~ .off-canvas-menu{
+    transform: translate(9vw, -15px);
+}
+.off-canvas-menu-container{
+    /* background-color: #8758FF; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.off-canvas-link{
+    border-bottom: thin solid red;
+    padding: 16px;
+    font-size: 1.5rem;
+    color: #FECD70;
+    text-decoration: none;
+}
+.off-canvas-link:first-child{
+    border-top: thin solid red;
+}
+.off-canvas-link:hover{
+    background-color: rgba(235, 57, 57, 0.5);
+}
+/* Ventana Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 997;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-container{
+    position: relative;
+    border: thick double red;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+.modal-container h2{
+    text-align: center;
+}
+.modal:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #900C3F;
+    text-align: center;
+    line-height: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+.modal-close:hover{
+    transform: scale(1.15);
+    background-color: #C70039;
+}
+/* Intro Star-wars */
+@keyframes introStarWars {
+    0%{
+        transform: perspective(100vw) rotateX(15deg) translateY(60%);
+    }
+    100%{
+        transform: perspective(100vw) rotateX(25deg) translateY(-120%);
+
+    }
+}
+.star-wars{
+    margin-left:auto ;
+    margin-right:auto ;
+    width: 70vw;
+    height: 100vh;
+    overflow: hidden;
+    color: #F9B208;
+    background-image: url("../assets/stars.gif");
+}
+.starwars-container{
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: justify;
+    letter-spacing: 0.1rem;
+    padding: 50px;
+    animation: introStarWars 20s linear infinite;
+
+}
+.starwars-container h2,
+.starwars-container h3{
+    font-size: 5vw;
+    text-align: center;
+}
+.starwars-container p{
+    font-size: 3vw;
+}
+.volver{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+}

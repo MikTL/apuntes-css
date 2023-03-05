@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="css/flex-box.css">
+</head>
+<body>
+    <h1>Todo Sobre Flexbox</h1>
+    <h2>Display Flex</h2>
+    <section class="display-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    <section class="display-flex2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    <h2>Display Inline-Flex</h2>
+    <section class="display-inline-flex">
+        <section class="display-flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </section>
+        <section class="display-flex2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </section>
+    </section>
+    <h2>Flexbox Reverse</h2>
+    <h3>Row reverse</h3>
+    <section class="reverse-row">
+        <section class="display-flex-reverse-row">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </section>
+    </section>
+    <h3>Column Reverse</h3>
+    <section class="reverse-column">
+        <section class="display-flex-reverse-column">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </section>
+    </section>
+    <h2>Propiedad Wrap</h2>
+    <section class="wrap wrap-small">
+        <h3>wrap</h3>
+        <section class="wrap-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </section>
+        <h3>Propiedad wrap-reverse</h3>
+        <section class="wrap-container-reverse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </section>
+    </section>
+    <h3>Wrap en columnas</h3>
+    <p>flex-flow= flex-direction flex-wrap;</p>
+    <div class="columns-wrap">
+        <section class="wrap-container-columns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </section>
+    </div>
+    <h2>JUSTIFY CONTENT Y ALIGN ITEM-ALIGN CONTENT</h2>
+    <div class="justify-align">
+        <div>
+            <h2>Justify Content</h2>
+            <h3>flex-start</h3>
+            <div class="justify start">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h3>flex-end</h3>
+            <div class="justify end">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h3>center</h3>
+            <div class="justify center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h3>space-between</h3>
+            <div class="justify space-between">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h3>space-around</h3>
+            <div class="justify space-around">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h3>space-evenly</h3>
+            <div class="justify space-evenly">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <h2>Align-items</h2>
+            <h3>flex-start</h3>
+            <div class="align align-flex-start">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <h3>flex-end</h3>
+            <div class="align align-flex-end">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <h3>center</h3>
+            <div class="align align-center">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <h3>stretch</h3>
+            <p class="width-p">Funciona cuando los items no tiene el height definido (mientras el flex-direction este en row)</p>
+            <div class="align align-stretch">
+                <div class="items"></div>
+                <div class="items"></div>
+                <div class="items"></div>
+            </div>  
+            <h3>Baseline</h3>
+            <div class="align align-baseline">
+                <div class="item">BA</div>
+                <div class="item">SE</div>
+                <div class="item">LINE</div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div>
+            <h2>Align-content</h2>
+            <p class="width-p">Funciona cuando la propiedad <code>flex-wrap</code> este con el valor <code>wrap</code>,  mueve los items en grupo </p>
+            <h3>Flex-end</h3>
+            <div class="align align-content-flex-end">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <h3>Center</h3>
+            <div class="align align-content-center">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <h3>space-evenly <small>flex-direction: column;</small></h3>
+            <div class="align align-content-space-evenly">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <p class="width-p"> <strong> También estan las propiedades como <code>stretch, space-around, space-between.</code> </strong></p>
+        </div>
+    </div>
+    <h2>PROPIEDADES QUE AFECTAN A LOS HIJOS DEL CONTENEDOR</h2>
+    <h3>flex-grow</h3>
+    <p>Flex-grow es una propiedad que dota a los elementos hijos con la capacidad de crecer en el espacio sobrante del contenedor padre, su valor por defecto es 0, si ponemos 1 quiere decir que todos los elementos tendran un tamaño sumado la división del espacio sobrante entre 3 más su tamaño definido, esto quiere decir que si mi contenedor mide 1000px de ancho y los tres elementos hijos miden 100px de ancho, el espacio sobrante seria 700px, ahora al momento de aplicarle el flex-grow: 1; a todos los elementos hijos, dividimos el espacio sobrante (700px) entre la cantidad de elementos hijos (3), esto nos daria un total 233.33px, este es el tamaño que crecerá los elementos hijos para ocupar todo el espacio del contenedor padre</p>
+    <h4>Cuando a todos los hijos se les da el mismo valor</h4>
+    <div class="child-properties">
+        <div class="item-child flex-grow"></div>
+        <div class="item-child flex-grow"></div>
+        <div class="item-child flex-grow"></div>
+    </div>
+    <h4>Cuando a uno de ellos se les da el doble que a los demas</h4>
+    <div class="child-properties">
+        <div class="item-child-2 flex-grow"></div>
+        <div class="item-child-2 flex-grow"></div>
+        <div class="item-child-2 flex-grow"></div>
+    </div>
+    <p>
+        Entonces si a uno de los hijos le aplicamos el flex-grow con valor 2, quiere decir que ese elemeto hijo tomará el doble de espacio sobrante que sus demas hermanos, esto quiere decir que ahora el espacio sobrante se tendrá que dividir entre 4, ya que uno de ellos tomará un espacio adicional más que sus hermanos
+    </p>
+    <h3>Flex-Shrink</h3>
+    <p>
+        Al contrario de flex-grow, esta propiedad dota de la capacidad para poder reducir su tamaño cuando su contenedor es muy pequeño, y posee las mismas caracteristicas que el flex-grow, solo que esta vez para reducir su tamaño, Por defecto esta propiedad ya viene activada <code>flex-shrink:1;</code> para desactivarla solo se tiene que darle como valor 0
+    </p>
+    <h5>(DISMINUIR EL ANCHO DEL viewport PARA APRECIARLO)</h5>
+    <div class="child-properties-shrink">
+        <div class="item-shrink flex-shrink"></div>
+        <div class="item-shrink flex-shrink"></div>
+        <div class="item-shrink flex-shrink"></div>
+    </div>
+    <h4>Cuando a uno de ellos se les da el doble que a los demas</h4>
+    <div class="child-properties-shrink">
+        <div class="item-shrink-2 flex-shrink"></div>
+        <div class="item-shrink-2 flex-shrink darle-color-aparte"></div>
+        <div class="item-shrink-2 flex-shrink"></div>
+    </div>
+    <h3>Flex-basis</h3>
+    <p>Esta propiedad nos sirve para establecer un ancho (si el eje de alinineacion de flex es horizontal) y alto si el eje es vertical. Su valor por defecto es <code>auto</code>, si cambiamos su valor, este hara que la propiedad width o height sean ignorados esten donde esten</p>
+    <h4>Normal, en el eje horizontal</h4>
+    <div class="container-basis">
+        <div class="item-basis flex-basis"></div>
+        <div class="item-basis flex-basis"></div>
+        <div class="item-basis flex-basis"></div>
+    </div>
+    <h4>En el eje vertical + Shorthand (<code>flex: flex-grow flex-shrink flex-basis;</code>)</h4>
+    <div class="container-shorthand-flex">
+        <div class="flex-shorthand"></div>
+        <div class="flex-shorthand"></div>
+        <div class="flex-shorthand"></div>
+    </div>
+    <h3>PROPIEDADES order Y align-self </h3>
+    <p>
+        La propiedad <code>order</code> en flex-box nos sirve para establecer un orden para los elementos de un contendor, la regla es: el valor menor, va primero, su valor por defecto es 0 y acepta valores negativos. La propiedad align-self nos sirve para alinear un elemento en concreto, esto hara que el align-items no aplique para ese elemento.
+    </p>
+    <div class="container-order-align-self">
+        <div class="item-order">1</div>
+        <div class="item-order">2</div>
+        <div class="item-order">3</div>
+        <div class="item-order">4</div>
+        <div class="item-order">5</div>
+    </div>
+    <h2>Responsive designe</h2>
+    <div class="container">
+        <section class="flex-container">
+            <article class="flex-item">Item 1</article>
+            <article class="flex-item">Item 2</article>
+            <article class="flex-item">Item 3</article>
+            <article class="flex-item">Item 4</article>
+            <article class="flex-item">Item 5</article>
+            <article class="flex-item">Item 6</article>
+            <article class="flex-item">Item 7</article>
+            <article class="flex-item">Item 8</article>
+            <article class="flex-item">Item 9</article>
+            <article class="flex-item">Item 10</article>
+            <article class="flex-item">Item 11</article>
+            <article class="flex-item">Item 12</article>
+            <article class="flex-item">Item 13</article>
+            <article class="flex-item">Item 14</article>
+            <article class="flex-item">Item 15</article>
+            <article class="flex-item">Item 16</article>
+            <article class="flex-item">Item 17</article>
+            <article class="flex-item">Item 18</article>
+            <article class="flex-item">Item 19</article>
+        </section>
+    </div>
+    <a class="volver" href="index.html#indice">VOLVER</a>
+</body>
+</html>

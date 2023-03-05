@@ -1,0 +1,92 @@
+h1{
+    width: 380px;
+    height: 30px;
+    text-align: center;
+    border-width: 5px;
+    border-style: double;
+    border-color: darkblue;
+    background-color: #CDC733;
+    margin: 0 auto;
+}
+pre{
+    background-color: black;
+    color: aquamarine;
+}
+.caja-uno,
+.caja-dos{
+    background-color: #B8FFF9;
+    border: medium solid #B85C38;
+    padding: 8px 5px;
+    margin: 8px 100px;
+}
+/* Propiedad Visibility */
+.p-visibility{
+    visibility: hidden;
+}
+/* Propiedad Overflow */
+.p-overflow{
+    width: 200px;
+    height: 100px;
+    background-color: #9CB4CC;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow: auto;
+}
+.p-overflow-horizontal{
+    background-color: #FFE61B;
+    white-space: nowrap;
+    width: 200px;
+    overflow-x: auto;
+}  
+/* Tamaño de caja */
+.div-box-sizing,
+.div-border-box,
+.no-border{
+    width: 500px;
+    height: 160px;
+    background-color: lightcyan;
+}
+.div-box-sizing{
+    border: medium solid black;
+}
+.div-border-box{
+    box-sizing: border-box;
+    padding: 5px;
+    border: medium solid black;
+}
+/* Colapso de margenes */
+/* Verticalmente */
+.div-general-colapso div{
+    border:thin solid black ;
+    background-color: aquamarine;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+/* Horizontalmente */
+.div-general-colapso span{
+    background-color: aquamarine;
+    border:thin solid black;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+/* Centrado de caja*/
+
+.sitio-web{
+    width: 500px;
+    height: 200px;
+    border: thin solid black;
+    background-color: #6E85B7;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 0 3px;
+}
+.sitio-web hr{
+    border: thin groove black;
+}
+.sitio-web h2,
+.sitio-web footer>p{
+    text-align: center;
+    margin: 6px 0;
+}

@@ -1,0 +1,55 @@
+.list li{
+    background-color: #98f56d;
+    width: 80%;
+}
+.style-type{
+    display: flex;
+    margin-right: 2px;
+}
+.upper-alfa{
+    list-style-type: upper-alpha;
+    margin-right: inherit;
+}
+.leading-zero{
+    list-style-type: decimal-leading-zero;
+    margin-right: inherit;
+}
+.circle{
+    list-style-type: circle;
+    margin-right: inherit;
+    list-style-position: inside;
+}
+/* imagenes como viñeta  */
+.img_vinietas{
+    list-style-type: none;
+}
+.img_vinietas li::before{
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url("../assets/favicon.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* Columnas */
+.columnas{
+    list-style-position: inside;
+    column-count: 4;
+    column-gap: 2rem;
+    column-rule: thin solid darkgreen;
+    column-width: 150px;
+}
+.volver{
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    position: fixed;
+    top: 20vh;
+    left: 85vw;
+}

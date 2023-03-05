@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/variables-functions.css">
+    <title>Variables y Funciones en CSS</title>
+</head>
+<body>
+    <h1>Variables y Funciones</h1>
+    <h2>Custom Propierties (Variables CSS)</h2>
+    <p>Las variables son definidas de la siguiente manera <code>--name-variable: valor;</code> la variable puede almacenar distintos valores como: colores, medidas, funciones, etc. Las variables solo funcionan el propio 
+    selector donde se declaro la variable y en los hijos del elemento selector donde se declaró la variable. 
+    Pero es posible crear variables que funcionen en cualquier selector, eso se logra creando las variables en
+    la pseudoclase <code>:root{ --variable: valor;}</code> entonces, ahora sí podemos usar la variable en los
+    selectores que queramos.
+    </p> 
+    <p>Un ejemplo:</p>
+    <article class="custom-props-1">
+        <section class="custom-props-2">
+            <div class="custom-props-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum at aspernatur, veniam accusantium ipsum repellat dolores magnam minima laborum architecto quam blanditiis fuga quibusdam provident cupiditate! Saepe esse vel quibusdam!
+            </div>
+        </section>
+    </article>
+    <h2>Funciones en CSS</h2>
+    <ul>
+        <li>var()</li>
+        <li>url()</li>
+        <li>calc()</li>
+        <li>min() & max()</li>
+    </ul>
+    <div class="ch-10">
+        1234567890
+    </div>
+    <h3>Funciones min y max</h3>
+    <div class="min-max">
+        APRENDO CSS
+    </div>
+    <h3>Función clamp</h3>
+    <p>
+        Inspeccionar el h1 (reduciendo el tamaño del viewport). Esta funcion fija un valor 
+        entre un limite superior e inferior
+    </p>
+    <a class="volver" href="index.html#indice">Volver</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

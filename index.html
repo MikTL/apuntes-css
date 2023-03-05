@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo CSS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <article id="indice">
+    <h1>Apuntes sobre CSS</h1>
+    <h2>Temario CSS</h2>
+    <ul class="list_index">
+        <li><a href="index.html#selectores_basicos">Selectores Basicos</a></li>
+        <li><a href="index.html#selectores_avanzados">Selectores Avanzados</a></li>
+        <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+        <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
+        <li><a href="index.html#algoritmo-css">El algoritmo de Css</a></li>
+        <li><a href="box-model.html">Modelo de caja</a></li>
+        <li><a href="positions.html">Posicinamiento en CSS</a></li>
+        <li><a href="position-examples.html">Ejemplos de Posicinamiento CSS</a></li>
+        <li><a href="colors.html">Colores en CSS</a></li>
+        <li><a href="units.html">Unidades de medida en CSS</a></li>
+        <li><a href="variables-functions.html">Variables y Funciones en CSS</a></li>
+        <li><a href="fonts-text.html">Fuentes y estilos de texto</a></li> 
+        <li><a href="border-outline.html">Bordes y Outlines</a></li>
+        <li><a href="backgrounds.html">Fondos en CSS</a></li>
+        <li><a href="images.html">Estilos de Imagenes</a></li>
+        <li><a href="lists.html">Estilos de Lista</a></li>
+        <li><a href="tables.html">Tablas en CSS</a></li>
+        <li><a href="formularios.html">Estilos a formularios</a></li>
+        <li><a href="visual-effects.html">Efectos Visuales en CSS</a></li>
+        <li><a href="scroll-one-page.html">Efectos de Scroll(<small>Sitio One Page</small> )</a></li>
+        <li><a href="scroll-snap-slides.html">Ajuste del Scroll (<small>Slides</small> )</a></li>
+        <li><a href="motion.html">Movimiento en CSS</a></li>
+        <li><a href="flex-box.html">Flexbox</a></li>
+    </ul>
+<hr>
+    </article>
+    
+    <article id="selectores_basicos">
+        <h2>Selectores Basicos:</h2>
+        <ol>
+            <li><a href=""></a>Por etiqueta: 
+                <pre>
+                <code>
+        h1{ 
+            propiedad: valor;
+        }
+                </code>
+                </pre>
+            </li>
+            <li><a href=""></a> Por ID: 
+                <pre>
+                    <code>
+        #id_etiqueta {
+            propiedad:valor;
+        }
+                    </code>
+                </pre>
+            </li>
+            <li><a href=""></a>Por clases (recomendada):
+                <pre>
+                    <code>
+        .class_etiqueta {
+            propiedad:valor;
+        }
+                    </code>
+                </pre>
+            </li>
+        </ol>
+        <p>Al <code>&lt;h1&gt;</code> le aplicamos estilo con su etiqueta, al titulo del temario 
+            por su <code>id=""</code> y al marcador de las lista por su <code>class=""</code>
+        </p>
+        <h3>Ejemplos con el atributo <i>class=""</i></h3>
+        <p>En html podemos añadir varias clases en el mismo atributo <code>class""</code> y eso 
+            nos facilita lo siguiente:
+        </p>
+        <p class="text-32 bg-skyblue text-darkblue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cupiditate eveniet
+            iusto molestiae ea provident expedita similique exercitationem, debitis eligendi
+            eius illo quo pariatur quas numquam magnam, laboriosam possimus? Minima.
+        </p>
+        <p class="text-20 bg-steelblue text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cupiditate eveniet
+            iusto molestiae ea provident expedita similique exercitationem, debitis eligendi
+            eius illo quo pariatur quas numquam magnam, laboriosam possimus? Minima.
+        </p>
+        <p class="text-20 bg-skyblue text-darkblue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cupiditate eveniet
+            iusto molestiae ea provident expedita similique exercitationem, debitis eligendi
+            eius illo quo pariatur quas numquam magnam, laboriosam possimus? Minima.
+        </p>
+        <p>Dar estilos con clases nos permite reutilizar código, por ejemplo con los párrafos
+            anteriores, el ultimo parrafo tiene clases tanto del primer párrafo como del segundo.
+            Es por eso que tiene el color de letra y fondo del primero, pero el tamaño letra lo 
+            tiene del segundo párrafo.
+        </p>
+        <a href="index.html#indice">⏫</a><br>
+    </article>
+    <hr>
+    <article id="selectores_avanzados">
+    <h2>Selectores Avanzados</h2>
+    <h3>Selectores Hijos</h3>
+    <h4>Selectores de hijos directos </h4>
+    <ul class="hijos_directos">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <h4>Selectores de hijos descendientes </h4>
+    <ul class="hijos_descendientes">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <p>Explicación con las listas de arriba, los selectores hijos se refiere
+        al orden en que estan las etiquetas, los hijos son las etiquetas  que 
+        estan despues de la etiqueta de referencia, que en este caso la etiqueta 
+        de referenciaseria <code>&lt;ul&gt; &lt;/ul&gt;</code> y el hijo directo 
+        seria la etiqueta <code>&lt;li&gt; &lt;/li&gt;</code>, entonces el hijo
+        descendiente es aquella etiquetaque esta dentro de la etiqueta 
+        <code>&lt;li&gt;&lt;/li&gt;</code>, como se puede deducir dentro de cada
+        <code>&lt;li&gt; &lt;/li&gt;</code> esta la etiqueta <code>&lt;b&gt;&lt;/b&gt;</code>.
+        (recordar que <code>li</code> es una etiqueta de bloque, y <code>b</code> es 
+        una etiqueta de linea).
+    </p>
+    <h5>Codigo Css para hijos directos</h5>
+    <pre>
+        <code>
+    .hijos_directos>li{
+        background-color:aquamarine;
+    }
+        </code>
+    </pre>
+    <h5>Codigo Css para hijos descendientes</h5>
+    <pre>
+        <code>
+    .hijos_descendientes b{
+        background-color:aquamarine;
+    }
+        </code>
+    </pre>
+    <h3>Selectores Hermanos</h3>
+    
+    <h4>Hermanos (en general)</h4>
+    <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos_general"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <h4>Hermanos Adyadcentes</h4>
+    <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermano_adyacente"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <p>Explicación "hermanos" hace referencia a las etiquetas que estan en un mismo nivel, 
+        en los ejemplos tomamos a la etiqueta que contiene "Verano" para tomarlo como 
+        referencia para aplicar cierto estilo: 
+    </p>
+    <p> <b>Codigo para hermanos en general:</b> </p>
+        <pre>
+            <code>
+    .hermanos_general~li{
+        background-color: aquamarine;
+    }
+            </code>
+        </pre>
+        <p>Cuando se pone "<code>~</code>" Los estilos se aplican a toda etiqueta hermano
+            que es ta por debajo del que se tomó por referencia.
+        </p>
+    <p><b>Codigo para hermanos Adyadcentes:</b> </p>
+        <pre>
+            <code>
+    .hermanos_adyacentes+li{
+        background-color: aquamarine;
+    }
+            </code>
+        </pre>
+        <p>Cuando se pone  "<code>+</code>" Los estilos se aplican solamente a la
+            etiqueta hermano que esta debajo del que se tomo por referencia.
+        </p>
+    <h3>Selectores de atributos</h3>
+    <p>Para este ejemplo usaremos la pagina del profesor Jon Mircha</p>
+    <nav class="selectores_atributo">
+        <ul>
+            <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+            <li><a class="menu-item cursos " href="http://jonmircha.com/cursos" target="_blank">Cursos</a></li>
+            <li><a href="https://jonmircha.com/blog" target="_blank">Blog</a></li>
+            <li><a class="menu-item mentoria" href="http://jonmircha.com/mentoria" target="_blank">Mentoria</a></li>
+            <li><a  href="https://jonmircha.com/hola" target="_blank">Hola</a></li>
+            <li><a href="index.html#index">Ir al inicio</a></li>
+        </ul>
+    </nav>
+    <p>Para hacer el ejemplo anterior use la etiqueta <i>nav</i> que es la que lleva el class principal,
+        con esa clase podemos darle estilos a los elementos que se encuentren dentro de esa etiqueta, en el
+        ejemplo tenemos una lista de enlaces que dimos estilos filtrando  el valor de sus atributos, como
+        por ejemplo si el <i>target="_blank"</i> entoces se aplica negrita a esos elementos. Existen 
+        varias formas de filtrar los elementos a darle estilos, algunos son
+            <ul>
+                <li>Con *: <code>.selectores_atributo a[href*="jonmircha"]{}</code> aqui 
+                    le decimos que aplique el estilo a todo elemento que contenga la palabra "jonmircha"
+                    como valor del atributo <i>href</i>. Sin importar que hay antes o despues de dicha palabra.
+                </li>
+                <li>
+                    Con ^: <code>.selectores_atributo a[href^="http://"]{}</code> Para aplicar los estilos
+                    a todo elemento que el valor del href inicie con "http://".
+                </li>
+                <li>
+                    con $: <code>.selectores_atributo a[href$=".com"]{}</code> Lo mismo que el anterior 
+                    pero, esta vez con el final del valor del href.
+                </li>
+                <li>
+                    Con ~: <code>.selectores_atributo a[class~="cursos"]{}</code> Aqui usamos ~ para aplicar 
+                    el estilo a todo elemento que el valor de class contenga "cursos " y ademas que
+                    este separada por espacios en una lista, eso quiere decir que cursos, no 
+                    es el unico valor de class.
+                </li>
+                <li>
+                    con |: <code>.selectores_atributo a[class|="menu"]{}</code> Usamos | para aplicar el 
+                    estilo a todo elemento que contenga la palabra "menu" seguida de 
+                    un guión medio, si la palabra "menu" existe como valor de un class, pero no lleva 
+                    ningun guión medio seguidono se aplicará el estilo.
+                </li>
+            </ul>
+    </p>
+    <h3>Selector universal (*)</h3>
+    <p>Este se usa de manera general para todo el documento HTML como: <code>*{font-family: sans-serif;}</code>,
+        por ejemplo con este codigo puse la fuente Sans-serif en todo el documento html.
+    </p>
+    <p>
+        Pero tambien se puede usar de manera contextual, quiere decir de donde nos encontremos, como por 
+        ejemplo en la siguiente lista, la etiqueta ul tiene como class="selector_universal", y cambiamos 
+        el tamaño de todo elemento dentro de esa etiqueta usando <code>.selector_universal*{font-size: 25px;}</code>
+        <ul class="selector_universal">
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>
+    </p>
+    <br><a class="subir" href="index.html#indice">⏫</a><br>
+    </article>
+    <hr>
+    <article id="pseudoclases">
+        <h2>Pseudoclases</h2>
+        <p>Pseudoclases: Dan estilos dependiendo del contexto, posición o estado del 
+            elemento, por ejemplo que si un radio no esta marcado que tenga un estilo, y cuando 
+            lo marcas que cambie a otro.
+        </p>
+        <form class="form-pseudoclases">
+            <input type="text" name="nombre" id="" placeholder="Escribe tu nombre" required> <br>
+            <input type="email" name="correo" id="" placeholder="Escribe tu correo" required> <br>
+            <input type="submit">
+            <input type="submit" disabled>
+
+        </form>
+        <p>Ejemplos con enlaces: (hover, visited, target)</p>
+        <nav class="menu-pseudoclases">
+            <a href="#secction1">Sección 1</a>
+            <a href="#secction2">Sección 2</a>
+            <a href="#secction3">Sección 3</a>
+            <a href="#secction4">Sección 4</a>
+        </nav>
+        <p class="p-pseudoclases">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sed fugit praesentium 
+            corrupti deserunt dolorem ex saepe iure quis nam beatae neque accusantium possimus optio, 
+            itaque, magnam nesciunt, labore obcaecati.
+        </p>
+        <p>
+            En los ejemplos anteriores, los enlaces y el párrafo cambian de estilo si le pones el cursor encima (hover). 
+            Si el enlace ya fue visitado (visited) toma otro color que no es el default y el target esta activo 
+            para el indice, si presionas el emoji que te lleva al índice veras que este toma un fondo verde limón.  
+        </p>
+        <ol class="lista-pseudoclases">
+            <li>Enero</li>
+            <li>Febrero</li>
+            <li>Marzo</li>
+            <li>Abril</li>
+            <li>Mayo</li>
+            <li>Junio</li>
+            <li>Julio</li>
+            <li>Agosto</li>
+            <li>Septiembre</li>
+            <li>Octubre</li>
+            <li>Noviembre</li>
+            <li>Diciembre</li>
+        </ol>
+        <p>En esta lista apliqué estilos según su posición dentro de una etiqueta contenedora (ol), inspeccionar o 
+            revisar codigo css.
+        </p>
+        <article class="articulo-pseudoclase">
+            <header>Esto es un header</header>
+            <p>Esto es un p</p>
+            <div>Esto es un div</div>
+            <p>Esto es un p</p>
+            <section>Esto es una section</section>
+            <p>Esto es un p</p>
+            <section>Esto es una section</section>
+            <p>Esto es un p</p>
+            <div>Esto es un div</div>
+            <footer>Esto es un footer</footer>
+        </article>
+        <p>En los elementos Anteriores se aplico estilos respecto a su posición pero tambien 
+            respecto a su tipo dentro de la etiqueta contenedora (article). Por ejemplo al primer 
+            elemento del tipo párrafo se le dio un background skyblue.
+        </p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <article id="pseudoelementos">
+        <h2>Pseudoelementos</h2>
+        <p><i>
+            Bandai Myth Cloth Ex</i> <span class="saga-geminis">Saga Geminis</span>
+            <span class="saga-precio">500 </span>
+        </p>
+        <p>En el parrafo anterior se agrego los emojis, el simbolo $ y el USD con los Pseudoelementos 
+            <code>::before y ::after</code>
+            
+        </p>
+        <p class="p-pseudoelemento">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci, nemo 
+            veritatis mollitia, dicta quasi magnam, eius possimus non velit asperiores! Ipsa 
+            doloremque ea expedita aut quas dolorum accusantium recusandae!
+        </p>
+        <p>A este párrafo lorem se le dio estilo a la primera letra y primera linea con 
+            <code> ::first-letter y ::first-line</code> respectivamente y para el estilo 
+            de selección <code>::selection</code> (Intenta seleccionar alguna parte del párrafo).
+        </p>
+        <input class="input-pseudoelemento" type="text" name="nombre" placeholder="Escribe tu nombre"><br>
+        <p>
+            A este input de tipo texto se le dio estilo al placeholder con el pseudoelemento 
+            <code>::placeholder</code>
+        </p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <article id="agrupar-selectores">
+        <h2>Agrupar Selectores</h2>
+        <form class="form-pseudoelementos">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+            <input type="email" name="correo" placeholder="Escribe tu correo">
+            <textarea name="comentario"  cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
+            <input type="submit">
+        </form>
+        <p>
+            En el fomulario anterior se dio estilos a todos los elementos (excluyendo al botón), agrupando selectores,
+            la manera de hacerlo es separandolos con comas, ejemplo:
+            <pre>
+                <code>
+            .form-pseudoelementos input[type="text"],
+            .form-pseudoelementos input[type="email"],
+            .form-pseudoelementos textarea {
+                border-radius: 10px;
+                color: #00bb10;
+                border-color: blue;
+                font-size: 16px;
+                background-color: antiquewhite;
+                display: block;
+                border-width: 2px;
+                width: 200px;
+                margin-bottom: 3px;
+            }
+                </code>
+            </pre>
+        </p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <article id="algoritmo-css">
+        <h2>El algoritmo de CSS</h2>
+        <ul>
+            <li><b>Cascada:</b> Aplica estilos dependiendo del orden en la que se definen dichos estilos</li>
+            <li><b>Especificidad:</b> Aplica estilos dependiendo el peso de un selector</li>
+            <li><b>Herencia:</b> Es la capacidad de de un selector de obtener (heredar) los valores de sus 
+                ancestros más cercanos se usa <i>inherit</i>
+            </del></li>
+        </ul>
+        <blockquote id="cita-marco" class="cita-marco" style="background-color:#D4F6CC ;">
+            Sé tolarante con los demas y estricto contigo mismo - <cite>Marco Aurelio</cite>
+        </blockquote>
+        <p>En el ejemplo de la frase citada de arriba, tiene un diferente fondo de el que 
+            se definió en la misma etiqueta, eso sucede por que en la hoja de estilos, se estableció
+            un fondo como <i>!important</i> y esto rompe con la cascada y especificidad. inspeccionar
+            para ver que hay mas selectores dando diferente fondo al blockquote, pero estos son tachados por
+            los otros selectores de mas peso, y haciendo caso omiso al algoritmo de cascada.
+        </p>
+        <p><b>Ejemplo de herencia</b></p>
+        <blockquote class="cita-seneca">
+            Lo que de raíz se aprende nunca del todo se olvida - <cite>Séneca</cite>
+        </blockquote>
+        <p>
+            En este blockquote la etiqueta <i>cita</i> esta heredando el estilo y color del borde,
+            el tamaño de fuente se hereda automaticamente asi que lo volví al valor inicial con
+            <i>initial</i>.
+        </p>
+        <a class="subir" href="index.html#indice">⏫</a>
+    </article>
+    <a class="subir" href="index.html#indice">⏫</a>
+</body>
+</html>

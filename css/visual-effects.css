@@ -1,0 +1,366 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+/* Sombras en caja */
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    border: medium solid black;
+    margin: 20px;
+    width: 150px;
+    height: 150px;
+}
+.shadow{
+    color: navy;
+    background-color: aquamarine;
+    box-shadow: 0.5rem 0.5rem ;
+}
+.shadow-blur{
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bold;
+    color: #3D087B;
+    box-shadow: -1rem -1rem 0.4rem ;
+}
+.shadow-blur-color{
+    background-color: #1859db48;
+    box-shadow: -1rem 1rem 0.8rem #00FFAB;
+}
+.shadow-blur-color-spread{
+    box-shadow: -0.5rem 0.5rem 0.5rem 1rem #C84B31;
+}
+.shadow-blur-color-inset{
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bold;
+    box-shadow: -1rem 1rem 0.8rem #064663 inset;
+}
+.multiple{
+    padding-top: 25px;
+    text-align: center;
+    box-shadow: 0.5rem 0.5rem #B4FF9F,
+     -0.5rem -0.5rem #FFA1A1,
+     0.5rem 0.5rem #FFD59E inset;
+}
+/* Sombras en textos */
+.text-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.text-shadow{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+    width: 200px;
+    height: 80px;
+    border: thin solid black;
+    margin: 5px;
+}
+.shadow-solid{
+    text-shadow: -0.7rem -1rem #B2A4FF;
+}
+.text-shadow-blur{
+    text-shadow: -0.7rem -1rem 0.2rem #9EB23B;
+}
+.text-shadow-multiple{
+    text-shadow: 3rem 1rem #B4FF9F,
+     -0.5rem -0.5rem #FFA1A1,
+     -3rem 1rem 0.2rem #FFD59E ;
+}
+/* sombra a un png */
+.drop-shadow{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    border: thin solid black;
+}
+.drop-shadow img{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(1rem 0.5rem 0.2rem aqua);
+}
+/* Degradados */
+.gradient-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gradient-container h3{
+    text-align: center;
+}
+/* lineal */
+.linear-gradient{
+    background-image: linear-gradient(50grad,#54BAB9, #F65A83, #d6e600);
+    background-image: linear-gradient(to right top,#54BAB9, #F65A83, #d6e600);
+}
+.linear-gradient-solid{
+    background-image: linear-gradient(90deg, red 33%, white 34% 68%, red 69%);
+}
+/* Radial */
+.radial-deg{
+    background-image: radial-gradient( lime, pink, aquamarine );
+}
+.radial-deg-top{
+    background-image: radial-gradient( ellipse 100px 50px at top,  #3FA796 25%, #FEC260 33% 66%,#A10035 66% 100%);
+}
+/* Conic */
+.conic-gradient{
+    background-image: conic-gradient(red, green);
+}
+.conic-grad-solid{
+    background-image: conic-gradient( from 90deg, red 135deg, blue 135deg 225deg, white 225deg);
+}
+/* Repetir degradados */
+.h3-independient{
+    text-align: center;
+    width: 230px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.repeat-container,
+.deg-graphics{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.repeat-grad-linear{
+    background-image: repeating-linear-gradient(45deg, red 0 10px, green 10px 20px, blue 20px 30px);
+
+}
+.repeat-grad-radial{
+    background-image: repeating-radial-gradient( at 74px 80px, #B33030 0 10px, #00C897 10px 20px, #FFE61B 20px 30px);
+
+}
+.repeat-grad-conic{
+    background-image: repeating-conic-gradient(#293462 0% 5%, #1CD6CE 5% 10%, #FEDB39 10% 15% );
+
+}
+/* Graficas con degradados */
+.cake-graphic{
+    border-radius: 50%;
+    background-image: conic-gradient(#FFE162 40%, #FF6464 40% 80%, #91C483 80%);
+}
+.donut-graphic{
+    border-radius: 50%;
+    background-image: 
+        radial-gradient(white 30px, black 30px 32px,  transparent 32px ),
+        conic-gradient(#06FF00 90deg, #3E00FF 90deg 250deg, #FF449F 250deg );
+}
+/* Filtros */
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card-container{
+    width: 200px;
+    height: auto;
+    margin-left: 5px;
+    
+}
+.box-img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.box-img img{
+    border: thin solid black;
+    width: 100%;
+    height: auto;
+}
+
+.blur-brightness-contrast{
+    filter: blur(0.2px);
+    filter: brightness(1.3);
+    filter: contrast(1.5);
+}
+.gray-scale{
+    filter: grayscale(0.8);
+}
+.sepia{
+    filter: sepia(0.8);
+}
+.hue-rotate{
+    filter: hue-rotate(304deg);
+}
+
+.invert{
+    filter: invert(1);
+}
+.box-img > .black{
+    filter: invert(1);
+}
+
+.opacity{
+    filter: opacity(0.5);
+}
+.saturate{
+    filter: saturate(2);
+}
+.multiple-filter{
+    filter: saturate(2) contrast(1.5) hue-rotate(304deg);
+}
+/* Filtros a fondos */
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.name_model{
+    color: black;
+    position: absolute;
+    top: 170px;
+    left: 35px;
+    padding: 7px;
+    width: 135px;
+    height: 32px;
+    border-radius: 5px;
+}
+.relative h4{
+    color: white;
+    background-color: rgba(43, 43, 24, 0.7);
+    backdrop-filter:blur(0.5rem) grayscale(0) hue-rotate(300deg);
+
+}
+/* dark mode with filters */
+/* .dark-mode{
+    background-color: white;
+    color: black;
+    filter: invert(1);
+    filter: invert(0);
+}
+.dark-mode img{
+    filter: invert(1);
+    filter: invert(0);
+
+} */
+/* MODOS DE MESCLA */
+.card-principal{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.box-mescla{
+    width: 234px;
+    height: 190px;
+    border: thin solid black;
+}
+.box-mescla img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.blend-mode img{
+    mix-blend-mode: color;
+    mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: screen;
+    mix-blend-mode: saturation;
+    mix-blend-mode: soft-light;
+
+}
+/* Mescla de imagenes de fondo */
+.bg-img-mescla{
+    background-image: url(../assets/gato_art.jpg), url(../assets/foto_perroo_surrealista.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+/* Mascaras */
+.contenedor-mascaras{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.clip-path-circle{
+    clip-path: circle();
+    clip-path: circle(50px);
+    clip-path: circle(100px at left);
+}
+.clip-path-ellipse{
+    clip-path: ellipse(80px 58px at 91px 47%);
+}
+.clip-path-inset{
+    clip-path: inset(5px);
+    clip-path: inset(5px round 50px);
+    clip-path: inset(5px round 50px 25px);
+    clip-path: inset(5px round 50px 25px 10px);
+    clip-path: inset(5px round 40px 25px 10px 5px) ;
+}
+.clip-path-polygon{
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%, 
+        79% 91%,
+        50% 70%, 
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%);
+}
+/* FORMAS */
+.shapes{
+    border: thick solid black;
+    padding: 1rem;
+    margin: 1px auto;
+    max-width: 800px;
+}
+.shapes img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.shape-1{
+    margin: 2rem 10px 20px 1px ;
+    shape-outside: ellipse();
+    shape-outside: circle();
+}
+.shape-2{
+    margin: 4rem 0rem 4rem 2rem;
+    shape-outside: ellipse();
+}
+.shape-3{
+    border-radius: 0%;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    margin-right: 1rem;
+    shape-outside: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+/* Volver */
+.volver{
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+}

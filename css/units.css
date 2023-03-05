@@ -1,0 +1,105 @@
+/* reseteamos el box-sizing */
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+/* pixeles */
+.pixeles{
+    background-color: lightcoral;
+    width: 500px;
+    height: 100px;
+    padding: 4px;
+    border: medium solid black;
+}
+/* Relativas */
+/* em */
+.em{
+    background-color: aquamarine;
+    font-size: 20px;
+    border: 0.1em solid darkblue;
+    padding: 0.11em;
+}
+.em-child{
+    background-color: lightgray;
+    font-size: 1.5em;
+    border: 0.08em solid darkred;
+    padding: 1em;
+}
+/* rem */
+.rem{
+    background-color: lightblue;
+    font-size: 20px;
+    border: 0.1rem solid darkblue;
+    padding: 0.11rem;
+}
+.rem-child{
+    background-color: lightgray;
+    font-size: 1.5rem;
+    border: 0.08rem solid darkred;
+    padding: inherit;
+}
+/* ex */
+.ex{
+    background-color: aquamarine;
+    font-size: 20px;
+    border: 0.1em solid darkblue;
+    padding: 0.11em;
+}
+.ex-child{
+    background-color: lightgray;
+    font-size: 1.5ex;
+    border: 0.08ex solid darkred;
+    padding: 1ex;
+}
+/* ch */
+.ch,
+.ch2{
+    background-color: lightsalmon;
+    width: 10ch;
+}
+/* Porcentajes */
+.percentages{
+    background-color: aquamarine;
+    width: 50%;
+}
+.box-parent{
+    background-color: darkolivegreen;
+    width: 500px;
+    height: 500px;
+}
+.box-child{
+    background-color: lightseagreen;
+    width: 50%;
+    height: 50%;
+}
+/* Viewport */
+.viewport{
+    background-color: rgba(0, 255, 0, 0.575);
+    width: 96.8vw;
+    height: 25vh;
+    font-size: 2vw;
+    padding: 1vw;
+}
+.vmax{
+    background-color: lightgreen;
+    width: 50vmax;
+    height: 10vmin;
+}
+/* volver */
+.volver{
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    position: fixed;
+    top: 20vh;
+    left: 85vw;
+}

@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+  }
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+}
+.font{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+    font-family: 'Cambria';
+    font-size: 25px;
+    font-weight: 600;
+    font-style: oblique;
+    font-variant: small-caps;
+    line-height:0.55;
+}
+/* cargar fuente externa */
+@font-face{
+    font-family: "Chalet";
+    src: url(../assets/Chalet.woff) format("woff");
+    font-display: swap;
+}
+.chalet{
+    font-family: 'Chalet', sans-serif;
+}
+@font-face{
+    font-family: "Pecita";
+    src: url(../assets/Pecita.woff) format("woff");
+    font-display: swap;
+}
+.pecita{
+    font-family: 'Pecita', sans-serif;
+    font-size: 2rem;
+}
+/* desde google fonts */
+.roboto{
+    font-family:'Roboto Slab', serif;
+    font-size: 20px;
+}
+/* Ajustes de texto */
+.text{
+    text-align: left;
+    text-indent: 3rem;
+    text-decoration:underline;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+}
+.text-overflow{
+    background-color: lightgrey;
+    border: thin solid black;
+    width: 40%;
+    padding: 1rem;
+    font-size: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* white-space */
+.white-space{
+    white-space: pre;
+}
+/* word-spacing */
+.word-spacing{
+    font-size: 20px;
+    word-spacing: 40px;
+}
+/* writing-mode */
+.writing-mode{
+    background-color: lightgreen;
+    font-size: 1.5rem;
+    writing-mode:vertical-lr;
+}
+.volver{
+    border: thin solid black;
+    border-radius: 3px;
+    padding: 2px;
+    background-color: lightyellow;
+    text-decoration: none;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+}

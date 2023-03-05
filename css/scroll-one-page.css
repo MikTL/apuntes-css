@@ -1,0 +1,57 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body,
+h1,
+h2{
+    margin: 0;
+}
+.header{
+    color: white;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: black;
+}
+.header a{
+    color: aquamarine;
+    margin: 1rem;
+}
+.header a:hover{
+    color: red;
+}
+.slide{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.829);
+    padding:1rem 0.5rem;
+
+}
+.slide:nth-child(even){
+    background-color: #0F3460;
+}
+img{
+    width: 50%;
+    height: auto;
+}
+/* A todos los id */
+[id]{
+    scroll-margin-top: 7.7ex;
+}
+.volver{
+    border: thin solid darkblue;
+    border-radius: 20%;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+}

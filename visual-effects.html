@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/visual-effects.css">
+    <title>Efectos Visuales en CSS</title>
+</head>
+<body>
+    <h1>Efectos visuales en CSS</h1>
+    <hr>
+    <h2>Sombras</h2>
+    <h3>Sombras en la caja</h3>
+    <div class="box-container">
+        <div class="shadow box"></div>  
+        <div class="shadow-blur box">Sombra Violeta</div>  
+        <div class="shadow-blur-color box"></div>  
+        <div class="shadow-blur-color-spread box"></div>  
+        <div class="shadow-blur-color-inset box"> Inset</div>  
+        <div class="multiple box"> Multiple</div>  
+    </div>
+    <h3>Sombras en el texto</h3>
+    <div class="text-container">
+        <div class="text-shadow shadow-solid">Sombra Solida</div>
+        <div class="text-shadow text-shadow-blur">Blur</div>
+        <div class="text-shadow text-shadow-multiple">Multiple</div>
+    </div>
+    <h3>Sombras a PNG</h3>
+    <div class="drop-shadow">
+        <img src="assets/arbol.png" alt="Arbol png">
+    </div>
+    <h2>Degradados</h2>
+    <div class="gradient-container">
+        <div>
+            <h3>Lineal</h3>
+            <div class="box linear-gradient"></div>
+            <div class="box linear-gradient-solid"></div>
+        </div>
+        <div>
+            <h3>Radial</h3>
+            <div class="box radial-deg"></div>
+            <div class="box radial-deg-top"></div>
+        </div>
+        <div>
+            <h3>conic</h3>
+            <div class="box conic-gradient"></div>
+            <div class="box conic-grad-solid"></div>
+        </div>
+    </div>
+    <h3 class="h3-independient">Repertir Degradados</h3>
+    <div class="repeat-container">
+        <div class="box repeat-grad-linear"></div>
+        <div class="box repeat-grad-radial"></div>
+        <div class="box repeat-grad-conic"></div>
+    </div> 
+    <h3 class="h3-independient">Graficas con Degradados</h3>
+    <div>
+        <div class="deg-graphics">
+            <div class="box cake-graphic"></div>
+            <div class="box donut-graphic"></div>
+        </div>
+    </div>
+    <hr>
+    <h2>Filtros</h2>
+    <div class="card">
+        <div class="card-container">
+            <div class="box-img">
+                <h3>Original</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="blur-brightness-contrast box-img">
+                <h3>Brillo y contraste</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Siena_agudong">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img gray-scale">
+                <h3>Escala de grises</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img sepia">
+                <h3>Sepia</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img hue-rotate">
+                <h3>Rotacion de tono</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img invert">
+                <h3 class="black">Invertido</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img opacity">
+                <h3>Opacidad</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img saturate">
+                <h3>Saturación</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img multiple-filter">
+                <h3>multiple</h3>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="box-img relative">
+                <h3>Filtro a fondos</h3>
+                <h4 class="name_model">Siena Agudong</h4>
+                <img src="assets/Siena_agudong.jpg" alt="Picture_original">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>Modos de Mescla</h2>
+    <div class="card-principal">
+        <h3>Sobre imagenes (img)</h3>
+        <div class="box-mescla relative blend-mode">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+            <img class="absolute" src="assets/gato_art.jpg" alt="Gato">
+        </div>
+        <h3>Sobre fondos (bg-img)</h3>
+        <div class="box-mescla bg-img-mescla">
+        </div>
+    </div>
+    <h2>Mascaras</h2>
+    <div  class="contenedor-mascaras">
+        <div class="box-mescla clip-path-circle">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+        </div>
+        <div class="box-mescla clip-path-ellipse">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+        </div>
+        <div class="box-mescla clip-path-inset">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+        </div>
+        <div class="box-mescla clip-path-polygon">
+            <img src="assets/foto_perroo_surrealista.jpg" alt="Perro Surrealista">
+        </div>
+    </div>
+    <h2>Formas</h2>
+    <article class="shapes">
+        <h3>Ejemplos de Formas y Siluetas entre textos e imágenes</h3>
+        <img src="assets/gato_art.jpg" alt="Gato" class="float-left shape-1">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <img src="assets/gato_art.jpg" alt="Gato" class="float-right shape-2">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <img src="assets/gato_art.jpg" alt="Gato" class="float-left shape-3">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit in. Eligendi, corrupti? Blanditiis delectus laboriosam, sequi expedita explicabo sunt nostrum fugiat esse hic officiis quidem culpa. Eum, obcaecati sed?
+        </p>
+    </article>
+
+
+
+
+    <br><a href="index.html#indice" class="volver">Volver</a>   
+</body>
+</html>

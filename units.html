@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/units.css">
+    <title>Unidades de medida</title>
+</head>
+<body>
+    <h1>Unidades de Medida</h1>
+    <p>Existes varias unidades de medida para usar para dar estilos a nuestra web, pero se clasifican en dos: </p>
+    <h2>Absolutas</h2>
+    <p> 
+        Su valor no cambia, son unidades del mundo real
+        <ul>
+            <li>pc,cm,mm,in, Q</li>
+            <li>pt(1/72in)</li>
+            <li>px(1/96in)</li>
+            <li></li>
+        </ul>
+    </p>
+    <h2>Relativas</h2>
+    <p>Su valor es relativo a un contexto</p>
+    <p>
+        <strong>Al tamaño de la fuente:</strong> 
+        <ul>
+            <li>em: basada en la anchura de la "m" de la fuente del elemento </li>
+            <li>rem: basada en la anchura de la "m" de la fuente del elemento raíz (html)</li>
+            <li>ex: basada en la altura de la "x" de la fuente del elemento.</li>
+            <li>ch: basada en la altura del "0" de la fuente del elemento</li>
+        </ul>
+    </p>
+    <p>
+        <strong>Al tamaño del contenedor: </strong> %
+    </p>
+    <p>
+        <strong>Al tamaño del viewport</strong>
+        <ul>
+            <li>vw- Ancho del viewport van del 1 a 100</li>
+            <li>vh- Alto del viewport van del 1 al 100</li>
+            <li>vmax- entre vw y vh toma el que tenga el mayor valor</li>
+            <li>vmin- entre vw y vh toma el que tenga el menor valor</li>
+        </ul>
+    </p>
+    <h2>Pixeles</h2>
+    <div class="pixeles">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, officiis pariatur modi libero iure suscipit, rem soluta, odit ab ullam enim deserunt. Praesentium, repudiandae ab. Facere optio ipsa repudiandae rerum.
+    </div>
+    <h2>Em</h2>
+    <div class="em">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae iure illum labore, reprehenderit modi laborum minus at necessitatibus odit fugiat maiores cupiditate delectus animi sunt commodi debitis. Non, quaerat aperiam.
+        <div class="em-child">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam eius recusandae consequuntur consectetur deleniti, ad aut odit dolorem a facilis error reiciendis quam cum architecto dolores praesentium perspiciatis dolorum!
+        </div>
+    </div>
+    <h2>Rem (Root em)</h2>
+    <div class="rem">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae iure illum labore, reprehenderit modi laborum minus at necessitatibus odit fugiat maiores cupiditate delectus animi sunt commodi debitis. Non, quaerat aperiam.
+        <section class="rem-child">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam eius recusandae consequuntur consectetur deleniti, ad aut odit dolorem a facilis error reiciendis quam cum architecto dolores praesentium perspiciatis dolorum!
+        </section>
+    </div>
+    <h2>Ex</h2>
+    <div class="ex">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae iure illum labore, reprehenderit modi laborum minus at necessitatibus odit fugiat maiores cupiditate delectus animi sunt commodi debitis. Non, quaerat aperiam 
+        xxxxxxxx.
+        <div class="ex-child">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam eius recusandae consequuntur consectetur deleniti, ad aut odit dolorem a facilis error reiciendis quam cum architecto dolores praesentium perspiciatis dolorum!
+        </div>
+    </div>
+    <h2>Ch</h2>
+    <div class="ch">1234567890</div>
+    <div class="ch2">||||mmmmmm</div>
+    <p>A cada div se le dio un ancho de 10ch, funciona perfectamente para 10 elementos numericos, incluso funcionaria para texto random, pero cuando hay muchos caracteres con ancho mas grandes (m), ahi podria el texto podria salirse del ancho definido</p>
+    <h2>Porcentajes (%)</h2>
+    <div class="percentages">
+        Caja de Bloque
+    </div>
+    <br>
+    <div class="box-parent">
+        <div class="box-child">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime impedit, id excepturi non cupiditate et laudantium sapiente nobis accusamus quisquam nostrum perspiciatis voluptate hic ullam eligendi porro reiciendis ad rem.
+        </div>
+    </div>
+    <h2>vw y vh(viewport width, viewport height)</h2>
+    <div class="viewport">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eum aliquam deserunt architecto laudantium dolor eaque saepe mollitia similique, dicta est. Temporibus odit libero earum quidem hic eaque aliquid accusamus?
+    </div>
+    <h2>vmax y vmin</h2>
+    <div class="vmax">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda aliquam dolor dolore nobis, eveniet quasi consectetur vero laudantium nam laborum eum error alias sit perspiciatis est culpa nulla modi deserunt!
+    </div>
+    <a class="volver" href="index.html#indice">Volver</a>
+</body>
+</html>

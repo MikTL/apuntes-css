@@ -1,0 +1,336 @@
+html {
+    box-sizing: border-box;
+  }
+  *, 
+  *:before, 
+  *:after {
+    box-sizing: inherit;
+}
+h1{
+    color: #ffa1fc;
+    font-size: 34px;
+    text-align: center;
+}
+#indice{
+    color: red;
+}
+
+.bg-skyblue{
+    background-color: skyblue;
+}
+.bg-steelblue{
+    background-color: steelblue;
+}
+/* Selectores hijos */
+.hijos_directos>li{
+    background-color: aquamarine;
+}
+.hijos_descendientes b{
+    background-color: aquamarine;
+}
+
+/* Selectores hermanos */
+.hermanos_general~li{
+    background-color: aquamarine;
+}
+.hermano_adyacente+li{
+    background-color: aquamarine;
+}
+
+.list_index{
+    color: #490cf1;  
+}
+
+/* Selectores de atributo */
+.selectores_atributo a[href]{
+    color: orangered;
+}
+.selectores_atributo a[target="_blank"]{
+    font-weight: bold;
+}
+/* Aqui le estamos diciento que este codigo se aplique a todo href que tenga como valor "jonmircha" */
+.selectores_atributo a[href*="jonmircha"]{
+    font-size: 24px;
+}
+/* Aqui le decimos que aplique estos estilos a todo href que tenga por valor inicial el "http://" */
+.selectores_atributo a[href^="http://"]{
+    text-decoration: none;
+}
+/* Aqui usamos $ para aplicar el estilo a todos los elementos de "a" con valor de href que 
+termine en ".com" */
+.selectores_atributo a[href$=".com"]{
+    background-color: black;
+}
+/* Aqui usamos ~ para aplicar el estilo a todo valor de class que contenga "cursos " y ademas que
+este separada por espacios en una lista, eso quiere decir que cursos, no es el unico valor de 
+class */
+.selectores_atributo a[class~="cursos"]{
+    font-style: italic;
+}
+/* Usamos | para aplicar el estilo a todo elemento que contenga la palabra "menu" en cuestion seguida de 
+un guión medio, si la palabra "menu" existe como valor de un class, pero no lleva ningun guión medio seguido
+no se aplicará el estilo*/
+.selectores_atributo a[class|="menu"]{
+    background-color: greenyellow;
+
+}
+/* Selector universal */
+*{
+    font-family: sans-serif;
+}
+.selector_universal{
+    font-size: 25px;
+}
+
+.text-32{
+    font-size: 32px;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-white{
+    color: white;
+}
+.text-darkblue{
+    color: darkblue;
+}
+/* Pseudoclases: para dar estilos dependiendo del contexto, estado, posición, etc. del 
+elemento*/
+.form-pseudoclases *:required{
+    border-color:yellow ;
+}
+.form-pseudoclases *:valid{
+    border-color:green ;
+}
+.form-pseudoclases *:invalid{
+    border-color:red ;
+}
+.form-pseudoclases *:focus{
+    background-color:skyblue ;
+}
+#indice{
+    color: red;
+}
+.subir{
+    text-decoration: none;
+}
+
+.bg-skyblue{
+    background-color: skyblue;
+}
+.bg-steelblue{
+    background-color: steelblue;
+}
+/* Selectores hijos */
+.hijos_directos>li{
+    background-color: #3a1233;
+}
+.hijos_descendientes b{
+    background-color: #3a1233;
+}
+
+/* Selectores hermanos */
+.hermanos_general~li{
+    background-color: aquamarine;
+}
+.hermano_adyacente+li{
+    background-color: aquamarine;
+}
+
+.list_index{
+    color: #490cf1;  
+}
+
+/* Selectores de atributo */
+.selectores_atributo a[href]{
+    color: orangered;
+}
+.selectores_atributo a[target="_blank"]{
+    font-weight: bold;
+}
+/* Aqui le estamos diciento que este codigo se aplique a todo href que tenga como valor "jonmircha" */
+.selectores_atributo a[href*="jonmircha"]{
+    font-size: 24px;
+}
+/* Aqui le decimos que aplique estos estilos a todo href que tenga por valor inicial el "http://" */
+.selectores_atributo a[href^="http://"]{
+    text-decoration: none;
+}
+/* Aqui usamos $ para aplicar el estilo a todos los elementos de "a" con valor de href que 
+termine en ".com" */
+.selectores_atributo a[href$=".com"]{
+    background-color: black;
+}
+/* Aqui usamos ~ para aplicar el estilo a todo valor de class que contenga "cursos " y ademas que
+este separada por espacios en una lista, eso quiere decir que cursos, no es el unico valor de 
+class */
+.selectores_atributo a[class~="cursos"]{
+    font-style: italic;
+}
+/* Usamos | para aplicar el estilo a todo elemento que contenga la palabra "menu" en cuestion seguida de 
+un guión medio, si la palabra "menu" existe como valor de un class, pero no lleva ningun guión medio seguido
+no se aplicará el estilo*/
+.selectores_atributo a[class|="menu"]{
+    background-color: greenyellow;
+
+}
+/* Selector universal */
+*{
+    font-family: sans-serif;
+}
+.selector_universal *{
+    font-size: 25px;
+}
+
+.text-32{
+    font-size: 32px;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-white{
+    color: white;
+}
+.text-darkblue{
+    color: darkblue;
+}
+/* Pseudoclases: para dar estilos dependiendo del contexto, estado, posición, etc. del 
+elemento*/
+.form-pseudoclases *:required{
+    border-color:yellow ;
+}
+.form-pseudoclases *:valid{
+    border-color:green ;
+}
+.form-pseudoclases *:invalid{
+    border-color:red ;
+}
+.form-pseudoclases *:disabled{
+    background-color:#cbcca8 ;
+}
+.menu-pseudoclases a:visited{
+    color: #7c5f2a;
+}
+.menu-pseudoclases a:hover{
+    color: orange;
+}
+.p-pseudoclases:hover{
+    font-size: 20px;
+}
+#indice:target{
+    background-color: greenyellow;
+}
+/* Pseudoclases por posición y tipo */
+/* posición: */
+.lista-pseudoclases li:first-child{
+    color: green;
+}
+.lista-pseudoclases li:last-child{
+    color: skyblue;
+}
+.lista-pseudoclases li:nth-child(3){
+    color:#3120E0;
+}
+.lista-pseudoclases li:nth-child(4n){
+    font-size: 18px;
+}
+.lista-pseudoclases li:nth-child(3n+1){
+    font-weight: bold;
+}
+/* para un numero de lista par */
+.lista-pseudoclases li:nth-child(even){
+    background-color: yellow;
+}
+/* Para un numero de lista impar */
+.lista-pseudoclases li:nth-child(odd){
+    background-color: orange;
+}
+/* Tipo */
+.articulo-pseudoclase p:first-of-type{
+    background-color: cadetblue;
+}
+.articulo-pseudoclase p:last-of-type{
+    background-color: #9cc764;
+}
+.articulo-pseudoclase p:nth-of-type(3){
+    background-color: fuchsia;
+}
+.articulo-pseudoclase *:not(p){
+    background-color: rgb(118, 131, 0);
+}
+/* Pseudoelementos: Dan estilos a partes especificas de un elemento, se usa :: para 
+diferenciarlos de los Pseudoclases*/
+.saga-geminis::before{
+    content: "🤼‍♂️";
+}
+.saga-geminis::after{
+    content: "♊";
+}
+.saga-precio::before{
+    font-weight: bold;
+    content: "$ ";
+}
+.saga-precio::after{
+    content: "USD";
+    font-weight: bold;
+}
+.p-pseudoelemento::first-letter{
+    font-weight: bold;
+    font-size: 30px;
+}
+.p-pseudoelemento::first-line{
+    color: #2d0097;
+}
+.p-pseudoelemento::selection{
+    color: #a50073;
+    background-color: #9cc764;
+}
+.input-pseudoelemento::placeholder{
+    font-weight: bold;
+    color: #eb151591;
+}
+/* Agrupando Selectores */
+.form-pseudoelementos input[type="text"],
+.form-pseudoelementos input[type="email"],
+.form-pseudoelementos textarea {
+    border-radius: 10px;
+    color: #00bb10;
+    border-color: blue;
+    font-size: 16px;
+    background-color: antiquewhite;
+    display: block;
+    border-width: 2px;
+    width: 200px;
+    margin-bottom: 3px;
+}
+/* Ejemplo de Algoritmos css */
+/* Especificidad*/
+blockquote.cita-marco{
+    background-color: #FFC18E !important;
+}
+blockquote#cita-marco.cita-marco{
+    background-color: #72c06b;
+}
+#cita-marco.cita-marco{
+    background-color: #c09e6b;
+}
+#cita-marco{
+    background-color: #896bc0;
+}
+blockquote.cita-marco{
+    background-color: red;
+}
+
+/* Ejemplo de herencia */
+.cita-seneca{
+    background-color: cyan;
+    font-size: 25px;
+    border-style: dotted;
+    border-color: red;
+}
+.cita-seneca cite{
+    background-color: chartreuse;
+    font-size: initial;
+    border-style: inherit;
+    border-color: inherit;
+}

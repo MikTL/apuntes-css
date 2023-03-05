@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scroll-snap-slides.css">
+    <title>Ajuste del scroll</title>
+</head>
+<body>
+    <main class="slides">
+        <section class="slide">
+            <article class="slide-container">
+                <h1 class="gradient-text">Ajuste del Scroll (<small>Slides</small>)</h1>
+                <section class="carousel">
+                    <div class="carousel-container">
+                        <article class="carousel-slide">
+                            <div class="carousel-slide-content">
+                                <h3>Slide 1</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-slide-content">
+                                <h3>Slide 2</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-slide-content">
+                                <h3>Slide 3</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-slide-content">
+                                <h3>Slide 4</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-slide-content">
+                                <h3>Slide 5</h3>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <a href="index.html#indice" class="volver gradient-text">VOLVER</a>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-container">
+                <h2 class="gradient-text">Slide 1</h2>
+                <p>Para lograr el efecto del scroll actual, los elementos deben de estar en un contenedor principal, en este caso es la etiqueta <code>main</code> a este contenedor se le dará un ancho y alto completo del viewport, ademas se le agrega las propiedades <code>overflow-y: scroll;</code> y <code> scroll-snap-type: block mandatory;</code> Es este ultimo el ecargado de hacer este efecto en el scroll</p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-container">
+                <h2 class="gradient-text">Slide 2</h2>
+                <p>
+                    Dentro del contenedor <code>main</code> hay varios contendores <code>section</code> dentro de cada  <code>section</code> esta un ultimo contenedor que es <code>article</code>, en este contenedor están 
+                    los elementos que se quiera mostrar en el viewport actual, en este caso son el titulos y estas explicaciones.
+                </p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-container">
+                <h2 class="gradient-text">Slide 3</h2>
+                <p>Por ahora aun no funcionará el efecto, porque los elementos hijos del contenedor principal deberan de tener la propiedad <code>scroll-snap-align: center;</code> Entonces Ahora si, ya esta listo</p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-container">
+                <h2 class="gradient-text">Slide 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat est id quae explicabo ex, quia alias fugit laudantium ad culpa ipsum possimus quas hic pariatur similique eligendi eaque nulla consequuntur!</p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-container">
+                <h2 class="gradient-text">Slide 5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat est id quae explicabo ex, quia alias fugit laudantium ad culpa ipsum possimus quas hic pariatur similique eligendi eaque nulla consequuntur!</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
