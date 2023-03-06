@@ -1,15 +1,15 @@
 h1{
     width: 380px;
-    height: 30px;
+    height: 50px;
     text-align: center;
     border-width: 5px;
     border-style: double;
     border-color: darkblue;
     background-color: #CDC733;
     margin: 0 auto;
+    color: black;
 }
 pre{
-    background-color: black;
     color: aquamarine;
 }
 .caja-uno,
@@ -18,6 +18,7 @@ pre{
     border: medium solid #B85C38;
     padding: 8px 5px;
     margin: 8px 100px;
+    color: black;
 }
 /* Propiedad Visibility */
 .p-visibility{
@@ -31,12 +32,18 @@ pre{
     /* overflow: hidden; */
     /* overflow: scroll; */
     overflow: auto;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
 }
 .p-overflow-horizontal{
     background-color: #FFE61B;
     white-space: nowrap;
     width: 200px;
     overflow-x: auto;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
 }  
 /* Tamaño de caja */
 .div-box-sizing,
@@ -45,6 +52,7 @@ pre{
     width: 500px;
     height: 160px;
     background-color: lightcyan;
+    color:black;
 }
 .div-box-sizing{
     border: medium solid black;
@@ -68,6 +76,7 @@ pre{
     border:thin solid black;
     margin-right: 20px;
     margin-left: 20px;
+    color: black;
 
 }
 /* Centrado de caja*/
