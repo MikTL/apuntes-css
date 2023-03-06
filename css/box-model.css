@@ -64,6 +64,9 @@ pre{
 }
 /* Colapso de margenes */
 /* Verticalmente */
+.div-general-colapso{
+    color: black;
+}
 .div-general-colapso div{
     border:thin solid black ;
     background-color: aquamarine;
@@ -76,8 +79,6 @@ pre{
     border:thin solid black;
     margin-right: 20px;
     margin-left: 20px;
-    color: black;
-
 }
 /* Centrado de caja*/
 
