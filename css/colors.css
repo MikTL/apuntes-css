@@ -1,23 +1,30 @@
+h1{
+    text-align: center;
+}
 .color-by-name{
     background-color: coral;
     border: medium solid darkblue;
     color: beige;
+    padding: 0 5px;
 }
 .color-hexadecimal{
     background-color: #00000050; /*el 50 representa la opacidad */
     border: thin solid #0f0;
-    color: #000;
+    color: #fff;
+    padding: 0 5px;
 }
 .color-rgb{
     background-color: rgba(0,0,0,0.3);/*rgba para agregar el canal alfa, para opacidad (0-1)*/
     border: medium solid rgb(30, 57, 138);
-    color: rgb(51, 2, 33);
+    color:  rgb(213 40 149);
+    padding: 0 5px;
 
 }
 .color-hsl{
     background-color: hsla(170,90% ,50%, 0.3);
     border: thin solid hsl(0, 100%, 50%);
     color: hsl(240, 100%, 30%);
+    padding: 0 5px;
 }
 /* transparente y currentColor */
 .transparent-current{
@@ -42,3 +49,67 @@
     border: medium solid darkblue;
     opacity: 0.3;
 }
+
+/* BOTON VOLVER */
+.cta {
+    position: fixed;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 1%;
+    text-decoration: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffea47;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   .cta:hover{
+    background: none;
+    text-decoration: none;
+   }
+   .cta:hover:before {
+    width: 100%;
+    background: #ffea47;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
