@@ -9,6 +9,9 @@ html{
 *::before{
     box-sizing: inherit;
 }
+h1{
+    text-align: center;
+}
 .custom-props-1{
     --primary-color: greenyellow;
     --font-size: 25px;
@@ -24,27 +27,79 @@ html{
     font-size: 2rem;
     padding: var(--padding-size);
     width: calc((var(--padding-size) * 2) + var(--num-ch));
+    color: black;
 } 
   /*Min y Max */
 .min-max{
     background-color:var(--bgc-default);
     width: min(250px, 20vw);
     height: max(150px, 25vh);
+    color: black;
 }
 /* clamp */
 h1{
     font-size: clamp(2rem, 1rem + 3vw, 3rem); 
 }
-/* volver*/
-.volver{
-    border: medium double green;
+/* BOTON VOLVER */
+.cta {
+    position: fixed;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 1%;
     text-decoration: none;
-    font-size: 20px;
-    padding: 1px;
-    border-radius: 5px;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffea47;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     color: black;
-    background-color: antiquewhite;
-    position: absolute  ;
-    top: 70%;
-    left: 75%;
-}
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   .cta:hover{
+    background: none;
+    text-decoration: none;
+   }
+   .cta:hover:before {
+    width: 100%;
+    background: #ffea47;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
