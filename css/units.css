@@ -7,22 +7,26 @@ html{
 *::before{
     box-sizing: inherit;
 }
-
+h1{
+    text-align: center;
+}
 /* pixeles */
 .pixeles{
     background-color: lightcoral;
     width: 500px;
     height: 100px;
     padding: 4px;
-    border: medium solid black;
+    border: medium solid #0c8fff;
+    color: black;
 }
 /* Relativas */
 /* em */
 .em{
     background-color: aquamarine;
     font-size: 20px;
-    border: 0.1em solid darkblue;
+    border: 0.1em solid lightcoral;
     padding: 0.11em;
+    color: black;
 }
 .em-child{
     background-color: lightgray;
@@ -32,10 +36,11 @@ html{
 }
 /* rem */
 .rem{
-    background-color: lightblue;
+    background-color: #c97ad3;
     font-size: 20px;
-    border: 0.1rem solid darkblue;
+    border: 0.2rem solid lime;
     padding: 0.11rem;
+    color: black;
 }
 .rem-child{
     background-color: lightgray;
@@ -45,10 +50,11 @@ html{
 }
 /* ex */
 .ex{
-    background-color: aquamarine;
+    background-color: #c97ad3;
     font-size: 20px;
-    border: 0.1em solid darkblue;
+    border: 0.1em solid lime;
     padding: 0.11em;
+    color: black;
 }
 .ex-child{
     background-color: lightgray;
@@ -61,11 +67,13 @@ html{
 .ch2{
     background-color: lightsalmon;
     width: 10ch;
+    color: black;
 }
 /* Porcentajes */
-.percentages{
+.percentajes{
     background-color: aquamarine;
     width: 50%;
+    color: black    ;
 }
 .box-parent{
     background-color: darkolivegreen;
@@ -76,30 +84,84 @@ html{
     background-color: lightseagreen;
     width: 50%;
     height: 50%;
+    color: black;
 }
 /* Viewport */
 .viewport{
     background-color: rgba(0, 255, 0, 0.575);
-    width: 96.8vw;
+    width: 60vw;
     height: 25vh;
     font-size: 2vw;
     padding: 1vw;
+    color: black;
 }
 .vmax{
     background-color: lightgreen;
     width: 50vmax;
     height: 10vmin;
+   
 }
-/* volver */
-.volver{
-    border: thin solid darkblue;
-    border-radius: 20%;
-    font-size: 1.5em;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2px;
+
+/* BOTON VOLVER */
+.cta {
     position: fixed;
-    top: 20vh;
-    left: 85vw;
-}
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 1%;
+    text-decoration: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffea47;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   .cta:hover{
+    background: none;
+    text-decoration: none;
+   }
+   .cta:hover:before {
+    width: 100%;
+    background: #ffea47;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
