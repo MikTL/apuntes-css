@@ -7,9 +7,12 @@ html{
 *::before{
     box-sizing: inherit;
 }
+h1{
+    text-align: center;
+}
 .contact-form{
     --form-color-text: #54BAB9;
-    --form-bg-color:#eee;
+    --form-bg-color:#cab7b73f;
     --form-error-color:#FF1E00;
     --form-correct-color:#3CCF4E;
     border: thin solid black;
@@ -18,6 +21,7 @@ html{
     width: 70%;
     padding: 0.8rem;
     background-color: var(--form-bg-color);
+    border-radius: 15px;
 }
 .contact-form > *{
     border-style: solid;
@@ -57,15 +61,66 @@ html{
     height: 150px;
 }
 
-.volver{
-    border: thin solid darkblue;
-    border-radius: 20%;
-    font-size: 1.5em;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2px;
+/* BOTON VOLVER */
+.cta {
     position: fixed;
-    top: 20vh;
-    left: 85vw;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 1%;
+    text-decoration: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffea47;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.cta:hover{
+    background: none;
+    text-decoration: none;
+}
+.cta:hover:before {
+    width: 100%;
+    background: #ffea47;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
 }
