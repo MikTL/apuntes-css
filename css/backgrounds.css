@@ -95,9 +95,9 @@ h1{
     top: 50%;
     right: 1%;
     text-decoration: none;
-   }
-   
-   .cta:before {
+}
+
+.cta:before {
     content: "";
     position: absolute;
     top: 0;
@@ -108,18 +108,18 @@ h1{
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
-   }
-   
-   .cta span {
+}
+
+.cta span {
     position: relative;
     font-family: "Ubuntu", sans-serif;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;
     color: black;
-   }
-   
-   .cta svg {
+}
+
+.cta svg {
     position: relative;
     top: 0;
     margin-left: 10px;
@@ -130,20 +130,20 @@ h1{
     stroke-width: 2;
     transform: translateX(-5px);
     transition: all 0.3s ease;
-   }
-   .cta:hover{
+}
+.cta:hover{
     background: none;
     text-decoration: none;
-   }
-   .cta:hover:before {
+}
+.cta:hover:before {
     width: 100%;
     background: #ffea47;
-   }
-   
-   .cta:hover svg {
+}
+
+.cta:hover svg {
     transform: translateX(0);
-   }
-   
-   .cta:active {
+}
+
+.cta:active {
     transform: scale(0.95);
-   } 
+} 
