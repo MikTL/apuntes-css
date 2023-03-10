@@ -46,12 +46,99 @@ img{
 [id]{
     scroll-margin-top: 7.7ex;
 }
-.volver{
-    border: thin solid darkblue;
-    border-radius: 20%;
-    font-size: 1.5em;
-    color: white;
+/* FORMAS */
+.shapes{
+    border: thick solid black;
+    padding: 1rem;
+    margin: 1px auto;
+    max-width: 800px;
+}
+.shapes img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.shape-1{
+    margin: 2rem 10px 20px 1px ;
+    shape-outside: ellipse();
+    shape-outside: circle();
+}
+.shape-2{
+    margin: 4rem 0rem 4rem 2rem;
+    shape-outside: ellipse();
+}
+.shape-3{
+    border-radius: 0%;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    margin-right: 1rem;
+    shape-outside: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+/* BOTON VOLVER */
+.cta {
+    position: fixed;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 1%;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2px;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffea47;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.cta:hover{
+    background: none;
+    text-decoration: none;
+}
+.cta:hover:before {
+    width: 100%;
+    background: #ffea47;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
 }
