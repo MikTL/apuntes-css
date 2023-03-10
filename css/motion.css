@@ -8,6 +8,9 @@ html{
 *::before{
     box-sizing: inherit;
 }
+h1{
+    text-align: center;
+}
 .box{
     border: medium solid black;
     margin-left: auto;
@@ -457,14 +460,12 @@ html{
     height: 8vw;
     background-color: red;
     transform: rotate(45deg);
-    border-radius: 25px 25px 0 0;
+    border-radius: 40px 40px 0 0;
     animation: heartColor 2s infinite;
-    
 }
 .heart::after{
     left: 1.3vw;
     transform: rotate(-45deg);
-    
 }
 /* Spinner */
 @keyframes spinner {
@@ -548,6 +549,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: black;
 }
 .tabs-menu input[type="radio"]{
     display: none;
@@ -560,7 +562,8 @@ html{
     cursor: pointer;
 }
 .tabs-menu label:hover{
-    color: white;
+    color: black;
+    opacity: .75;
 }
 .tabs-menu input[type="radio"]:checked + label{
     color: #fff;
@@ -586,7 +589,7 @@ html{
     transform: translateX(300%);
 }
 /* Boton Amburguesa */
-.off-canvas-btn{
+input[type='checkbox'].off-canvas-btn   {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
@@ -704,6 +707,7 @@ html{
     text-align: left;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
+    color: black;
 }
 .modal-container h2{
     text-align: center;
@@ -732,6 +736,7 @@ html{
 .modal-close:hover{
     transform: scale(1.15);
     background-color: #C70039;
+    text-decoration: none;
 }
 /* Intro Star-wars */
 @keyframes introStarWars {
@@ -769,15 +774,61 @@ html{
 .starwars-container p{
     font-size: 3vw;
 }
-.volver{
+/* BOTON VOLVER */
+.cta {
     position: fixed;
-    top: 2rem;
-    right: 2rem;
-    border: thin solid darkblue;
-    border-radius: 20%;
-    font-size: 1.5em;
-    color: white;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    top: 50%;
+    right: 1%;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2px;
+}
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffea47;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+}
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.cta:hover{
+    background: none;
+    text-decoration: none;
+}
+.cta:hover:before {
+    width: 100%;
+    background: #ffea47;
+}
+.cta:hover svg {
+    transform: translateX(0);
+}
+.cta:active {
+    transform: scale(0.95);
 }
