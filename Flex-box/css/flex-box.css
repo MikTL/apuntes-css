@@ -385,6 +385,11 @@ div{
         flex: 0 0 16.6666666%;
     }
 }
+
+.extras{
+    display: flex;
+    justify-content: space-evenly;
+}
 /* BOTON VOLVER */
 .cta {
     position: fixed;
